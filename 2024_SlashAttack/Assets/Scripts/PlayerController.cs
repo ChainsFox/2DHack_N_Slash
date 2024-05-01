@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.Rendering.DebugUI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 public class PlayerController : MonoBehaviour
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 18f;
     public float airWalkSpeed = 18f;
     public float jumpImpulse = 10f;
+    //new stuff
+    private SpriteRenderer sprite;
 
     TouchingDirections touchingDiretions;
 
@@ -25,45 +28,48 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDiretions = GetComponent<TouchingDirections>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
+        sprite.flipX = rb.velocity.x < 0f; //new way to flip the player if i want dont want to affect the "Shooting" script
     }
 
-    public bool _isFacingRight = true;
+    //public bool _isFacingRight = true;
 
-    public bool IsFacingRight
-    {
-        get { return _isFacingRight; }
-        private set
-        {
-            if (_isFacingRight != value)
-            {
-                //flip the local scale to make the player face the opposite direction
-                transform.localScale *= new Vector2(-1, 1);
+    //public bool IsFacingRight
+    //{
+    //    get { return _isFacingRight; }
+    //    private set
+    //    {
+    //        if (_isFacingRight != value)
+    //        {
+    //            //flip the local scale to make the player face the opposite direction
+    //            transform.localScale *= new Vector2(-1, 1);
+                 
 
-            }
-            _isFacingRight = value;
+    //        }
+    //        _isFacingRight = value;
 
-        }
-    }
+    //    }
+    //}
 
-    private void SetFacingDirection(Vector2 moveInput)
-    {
-        if (moveInput.x > 0 && !IsFacingRight)
-        {
-            //face right
-            IsFacingRight = true;
-        }
-        else if (moveInput.x < 0 && IsFacingRight)
-        {
-            //face left
-            IsFacingRight = false;
-        }
-    }
+    //private void SetFacingDirection(Vector2 moveInput)
+    //{
+    //    if (moveInput.x > 0 && !IsFacingRight)
+    //    {
+    //        //face right
+    //        IsFacingRight = true;
+    //    }
+    //    else if (moveInput.x < 0 && IsFacingRight)
+    //    {
+    //        //face left
+    //        IsFacingRight = false;
+    //    }
+    //}
 
     public float CurrentMoveSpeed
     {
@@ -144,8 +150,9 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        SetFacingDirection(moveInput);
+        //SetFacingDirection(moveInput);
         IsMoving = moveInput != Vector2.zero;
+
     }
 
     public void OnRun(InputAction.CallbackContext context)
