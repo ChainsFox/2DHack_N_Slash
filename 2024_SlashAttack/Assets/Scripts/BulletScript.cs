@@ -29,7 +29,7 @@ public class BulletScript : MonoBehaviour
     void Update()
     {
         destroyTimer += Time.deltaTime;
-        if (destroyTimer > 5f)
+        if (destroyTimer > 1.2f)
         {
             Destroy(gameObject);
         }

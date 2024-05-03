@@ -46,12 +46,12 @@ public class Shooting : MonoBehaviour
             canFire = false;
             Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
         }
-
-        if (Input.GetMouseButton(1) && canFire)
+        else if(Input.GetMouseButton(1) && canFire)
         {
             canFire = false;
             Instantiate(slash, bulltetTransform.position, Quaternion.identity);
         }
+
 
 
 

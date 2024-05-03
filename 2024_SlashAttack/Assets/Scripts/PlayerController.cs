@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     public float walkSpeed = 12f;
     public float runSpeed = 18f;
-    public float airWalkSpeed = 18f;
+    //public float airWalkSpeed = 18f;
     public float jumpImpulse = 10f;
     //new stuff
     private SpriteRenderer sprite;
@@ -75,10 +75,10 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
-                if (IsMoving && !touchingDiretions.IsOnWall)
+                if (IsMoving /*&& !touchingDiretions.IsOnWall*/) //03/05/2024-NEW: The player can freely move fast on the ground or on the air
                 {
-                    if (touchingDiretions.IsGrounded)
-                    {
+                    //if (touchingDiretions.IsGrounded)
+                    //{
                         if (IsRunning)
                         {
                             return runSpeed;
@@ -87,11 +87,11 @@ public class PlayerController : MonoBehaviour
                         {
                             return walkSpeed;
                         }
-                    }
-                    else
-                    {//Air move
-                        return airWalkSpeed;
-                    }
+                    //}
+                    //else
+                    //{//Air move
+                    //    return airWalkSpeed;
+                    //}
 
                 }
                 else
