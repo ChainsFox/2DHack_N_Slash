@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer))]
 public class PlayerController : MonoBehaviour
 {
 
@@ -21,13 +21,13 @@ public class PlayerController : MonoBehaviour
     //new stuff
     private SpriteRenderer sprite;
 
-    TouchingDirections touchingDiretions;
+    TouchingDirectionsPlayer touchingDiretionsPlayer;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        touchingDiretions = GetComponent<TouchingDirections>();
+        touchingDiretionsPlayer = GetComponent<TouchingDirectionsPlayer>();
         sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -35,7 +35,15 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
-        sprite.flipX = rb.velocity.x < 0f; //new way to flip the player if i want dont want to affect the "Shooting" script
+        //sprite.flipX = rb.velocity.x < 0f; //new way to flip the player if i want dont want to affect the "Shooting" script
+        if(rb.velocity.x < 0)
+        {
+            sprite.flipX = true;
+        }
+        if(rb.velocity.x > 0) 
+        {
+            sprite.flipX = false;
+        }
     }
 
     //public bool _isFacingRight = true;
@@ -171,7 +179,7 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         //TODO: Check if alive as well
-        if (context.started && touchingDiretions.IsGrounded)/*&& CanMove */
+        if (context.started && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
