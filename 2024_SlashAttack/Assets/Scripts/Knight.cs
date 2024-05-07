@@ -9,7 +9,7 @@ public class Kinght : MonoBehaviour
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
     public float walkStopRate = 0.05f;
-    //public DetectionZone attackZone;
+    public DetectionZone attackZone;
     //public DetectionZone cliffDetectionZone;
     Rigidbody2D rb;
     Animator animator;
@@ -92,7 +92,7 @@ public class Kinght : MonoBehaviour
 
     private void Update()
     {
-        //HasTarget = attackZone.detectedColliders.Count > 0;
+        HasTarget = attackZone.detectedColliders.Count > 0;
         //if (AttackCooldown > 0)
         //{
         //    AttackCooldown -= Time.deltaTime;
@@ -116,7 +116,14 @@ public class Kinght : MonoBehaviour
         //}
 
         //TEST:
-        rb.velocity = new Vector2(maxSpeed * walkDirectionVector.x, rb.velocity.y);
+        if(CanMove)
+        {
+            rb.velocity = new Vector2(maxSpeed * walkDirectionVector.x, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+        }
 
 
     }
