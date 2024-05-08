@@ -44,8 +44,7 @@ public class Damageable : MonoBehaviour
             }
         }
     }
-    [SerializeField]
-    private bool _isAlive = true;
+    
 
     //public bool IsHit { get
     //    {
@@ -64,6 +63,9 @@ public class Damageable : MonoBehaviour
     private bool isInvincible = false;
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
+
+    [SerializeField]
+    private bool _isAlive = true;
 
     public bool IsAlive
     {
@@ -116,8 +118,11 @@ public class Damageable : MonoBehaviour
             timeSinceHit += Time.deltaTime;
         }
 
-        //Hit(10);
+        Hit(10,yeh);
     }
+    //test:
+    private Vector2 yeh = new Vector2(0,0);
+    
     //return the damageable took damage or not
     public bool Hit(int damage, Vector2 knockback)
     {
