@@ -118,10 +118,10 @@ public class Damageable : MonoBehaviour
             timeSinceHit += Time.deltaTime;
         }
 
-        Hit(10,yeh);
+        //Hit(10,yeh);
     }
     //test:
-    private Vector2 yeh = new Vector2(0,0);
+    //private Vector2 yeh = new Vector2(0,0);
     
     //return the damageable took damage or not
     public bool Hit(int damage, Vector2 knockback)

@@ -1170,9 +1170,9 @@ MonoBehaviour:
       m_Calls: []
   _maxHealth: 100
   _health: 100
-  _isAlive: 1
   isInvincible: 0
   invincibilityTime: 0.25
+  _isAlive: 1
 --- !u!1 &1034777308
 GameObject:
   m_ObjectHideFlags: 0

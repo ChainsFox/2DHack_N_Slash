@@ -37,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5674264526067772789}
+  - {fileID: 1000915088318344759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4499640279740711067
@@ -246,9 +247,9 @@ MonoBehaviour:
       m_Calls: []
   _maxHealth: 100
   _health: 100
-  _isAlive: 1
   isInvincible: 0
   invincibilityTime: 0.25
+  _isAlive: 1
 --- !u!1 &1051892890765090026
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7337403, y: -0.21893835}
+  m_Offset: {x: 1.0281148, y: -0.21893835}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -325,7 +326,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.8876219, y: 2.8106804}
+  m_Size: {x: 3.8242655, y: 2.8106804}
   m_EdgeRadius: 0
 --- !u!114 &6268987946657810210
 MonoBehaviour:
@@ -343,3 +344,106 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   detectedColliders: []
+--- !u!1 &5297251330848778922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000915088318344759}
+  - component: {fileID: 301816154115875084}
+  - component: {fileID: 5489297285938044636}
+  m_Layer: 10
+  m_Name: SwordAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000915088318344759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297251330848778922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5704019546792499324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &301816154115875084
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297251330848778922}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.203164, y: 1.2501881}
+      - {x: 3.111722, y: 1.6175301}
+      - {x: 1.595645, y: 1.6652331}
+      - {x: 3.138811, y: 1.2248502}
+      - {x: 3.4068537, y: 0.42149472}
+      - {x: 2.2641268, y: -0.1440978}
+      - {x: 0.77524275, y: -0.0037183464}
+      - {x: 0.10192776, y: -0.51323676}
+      - {x: 0.9008356, y: -0.8840736}
+      - {x: 3.1146874, y: -0.9090922}
+      - {x: 4.5662775, y: 0.10886639}
+  m_UseDelaunayMesh: 0
+--- !u!114 &5489297285938044636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297251330848778922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd046754a92e18d499d4385b952568fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
