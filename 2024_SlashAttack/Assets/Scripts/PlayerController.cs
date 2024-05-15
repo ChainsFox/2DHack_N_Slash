@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
 
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 18f;
     //public float airWalkSpeed = 18f;
     public float jumpImpulse = 10f;
+    Damageable damageable;
     //new stuff
     private SpriteRenderer sprite;
 
@@ -29,11 +30,13 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDiretionsPlayer = GetComponent<TouchingDirectionsPlayer>();
         sprite = GetComponent<SpriteRenderer>();
+        damageable = GetComponent<Damageable>();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+        if (!damageable.LockVelocity)//if the character is not hit(=false) then we can move, if we get hit we cant update the velocity base on our input(aka you cant move)
+            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
         //sprite.flipX = rb.velocity.x < 0f; //new way to flip the player if i want dont want to affect the "Shooting" script
         if(rb.velocity.x < 0)
@@ -44,6 +47,7 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
+
     }
 
     //public bool _isFacingRight = true;
@@ -202,6 +206,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    public void OnHit(int damge, Vector2 knockback)
+    {
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+
 
 
 

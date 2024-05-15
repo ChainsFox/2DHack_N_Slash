@@ -245,6 +245,7 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
+  childObject: {fileID: 1051892890765090026}
   _maxHealth: 100
   _health: 100
   isInvincible: 0
@@ -446,4 +447,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
+  knockback: {x: 5, y: 2}

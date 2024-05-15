@@ -8,6 +8,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
+    public GameObject childObject;
 
     Animator animator;
 
@@ -37,11 +38,11 @@ public class Damageable : MonoBehaviour
         {
             _health = value;
             healthChanged?.Invoke(_health, MaxHealth);
-            //if health drop below 0, the character is no longer alive
+            //if health drop below or = to 0, the character is no longer alive
             if (_health <= 0)
             {
                 IsAlive = false;
-            }
+            }   
         }
     }
     
@@ -81,6 +82,7 @@ public class Damageable : MonoBehaviour
             if (value == false)
             {
                 damageableDeath.Invoke();
+                childObject.SetActive(false);
             }
 
         }

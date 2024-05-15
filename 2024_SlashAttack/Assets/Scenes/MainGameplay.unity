@@ -665,6 +665,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &917006433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1051892890765090026, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
+  m_PrefabInstance: {fileID: 8063838313452981443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &981067771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,17 +1166,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 987332930}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damageableDeath:
     m_PersistentCalls:
       m_Calls: []
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
+  childObject: {fileID: 1034777308}
   _maxHealth: 100
   _health: 100
   isInvincible: 0
-  invincibilityTime: 0.25
+  invincibilityTime: 0.8
   _isAlive: 1
 --- !u!1 &1034777308
 GameObject:
@@ -6441,6 +6459,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49701091124579290, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
+      propertyPath: rotatePoint
+      value: 
+      objectReference: {fileID: 917006433}
     - target: {fileID: 889886950192449659, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
       propertyPath: m_Name
       value: SkeletonEnemy
