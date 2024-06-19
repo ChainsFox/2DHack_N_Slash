@@ -115,7 +115,7 @@ public class Kinght : MonoBehaviour
         //        rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ; //slowly transition to 0 when the knight attack
         //}
 
-        //TEST:
+        //TEST(old logic for now):
         if(CanMove)
         {
             rb.velocity = new Vector2(maxSpeed * walkDirectionVector.x, rb.velocity.y);

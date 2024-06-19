@@ -9,6 +9,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
     public GameObject childObject;
+    public Rigidbody2D rb;
 
     Animator animator;
 
@@ -83,6 +84,9 @@ public class Damageable : MonoBehaviour
             {
                 damageableDeath.Invoke();
                 childObject.SetActive(false);
+                //test(worked)-19/06/2024-fixed bug where you still move when death
+                rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX;
+
             }
 
         }
@@ -105,6 +109,7 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
