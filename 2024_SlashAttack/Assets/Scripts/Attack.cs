@@ -26,6 +26,9 @@ public class Attack : MonoBehaviour
             //if x > 0 then apply knock back as normal, if not(then x is < 0) we apply the same force but reverse 
             Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
+            
+
+
             //hit the target
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
 

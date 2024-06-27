@@ -1186,8 +1186,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   childObject: {fileID: 1034777308}
+  rb: {fileID: 0}
   _maxHealth: 100
-  _health: 10
+  _health: 100
   isInvincible: 0
   invincibilityTime: 0.8
   _isAlive: 1
@@ -6441,6 +6442,10 @@ PrefabInstance:
     - target: {fileID: 8426371447472402845, guid: 8b858965367345944bf868d024e3b5ee, type: 3}
       propertyPath: m_Name
       value: slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426371447472402845, guid: 8b858965367345944bf868d024e3b5ee, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8426371447472402845, guid: 8b858965367345944bf868d024e3b5ee, type: 3}
       propertyPath: m_IsActive

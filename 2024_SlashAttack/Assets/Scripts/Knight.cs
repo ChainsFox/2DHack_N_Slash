@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class Kinght : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
+public class Knight : MonoBehaviour
 {
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
@@ -87,7 +87,7 @@ public class Kinght : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchingDirections>();
         animator = GetComponent<Animator>();
-        //damageable = GetComponent<Damageable>();
+        damageable = GetComponent<Damageable>();
     }
 
     private void Update()
@@ -106,24 +106,24 @@ public class Kinght : MonoBehaviour
         {
             FlipDirection();
         }
-        //if (!damageable.LockVelocity)
-        //{
-        //    if (CanMove && touchingDirections.IsGrounded)
+        if (!damageable.LockVelocity)
+        {
+            if (CanMove && touchingDirections.IsGrounded)
 
-        //        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (walkAcceleration * walkDirectionVector.x), -maxSpeed, maxSpeed), rb.velocity.y);
-        //    else
-        //        rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ; //slowly transition to 0 when the knight attack
-        //}
+                rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (walkAcceleration * walkDirectionVector.x), -maxSpeed, maxSpeed), rb.velocity.y);
+            else
+                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ; //slowly transition to 0 when the knight attack
+        }
 
         //TEST(old logic for now):
-        if(CanMove)
-        {
-            rb.velocity = new Vector2(maxSpeed * walkDirectionVector.x, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
-        }
+        //if (CanMove)
+        //{
+        //    rb.velocity = new Vector2(maxSpeed * walkDirectionVector.x, rb.velocity.y);
+        //}
+        //else
+        //{
+        //    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+        //}
 
 
     }
