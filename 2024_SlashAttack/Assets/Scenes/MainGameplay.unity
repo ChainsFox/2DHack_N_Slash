@@ -1187,8 +1187,8 @@ MonoBehaviour:
       m_Calls: []
   childObject: {fileID: 1034777308}
   rb: {fileID: 0}
-  _maxHealth: 500
-  _health: 500
+  _maxHealth: 100
+  _health: 100
   isInvincible: 0
   invincibilityTime: 0.8
   _isAlive: 1
@@ -6472,14 +6472,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 49701091124579290, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
-      propertyPath: _health
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 49701091124579290, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
-      propertyPath: _maxHealth
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 49701091124579290, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
       propertyPath: rotatePoint
       value: 

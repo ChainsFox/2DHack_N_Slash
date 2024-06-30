@@ -93,11 +93,11 @@ public class Knight : MonoBehaviour
     private void Update()
     {
         HasTarget = attackZone.detectedColliders.Count > 0;
-        //if (AttackCooldown > 0)
-        //{
-        //    AttackCooldown -= Time.deltaTime;
+        if (AttackCooldown > 0)
+        {
+            AttackCooldown -= Time.deltaTime;
 
-        //}
+        }
     }
 
     private void FixedUpdate()
