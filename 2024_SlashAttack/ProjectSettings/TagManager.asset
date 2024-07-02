@@ -16,7 +16,7 @@ TagManager:
   - Enemy
   - PlayerHitbox
   - EnemyHitbox
-  - 
+  - GroundDetection
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 2481392051
+    locked: 0
+  - name: Ground
+    uniqueID: 1266990779
     locked: 0
   - name: Default
     uniqueID: 0
