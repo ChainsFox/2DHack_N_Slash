@@ -261,8 +261,8 @@ MonoBehaviour:
       m_Calls: []
   childObject: {fileID: 1051892890765090026}
   rb: {fileID: 0}
-  _maxHealth: 400
-  _health: 400
+  _maxHealth: 200
+  _health: 200
   isInvincible: 0
   invincibilityTime: 0.25
   _isAlive: 1
