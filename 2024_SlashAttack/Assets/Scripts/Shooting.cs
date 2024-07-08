@@ -23,6 +23,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //UPGRADE: Remember to try to update this to new input system
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition); //transform mouse position to a vector 3 variable
 
         Vector3 rotation = mousePos - transform.position;
@@ -59,7 +60,7 @@ public class Shooting : MonoBehaviour
 
 
     }
-
+    
     //public void OnShoot(InputAction.CallbackContext context)
     //{
     //    canFire = false;
