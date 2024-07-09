@@ -112,6 +112,7 @@ public class Knight : MonoBehaviour
             if (CanMove && touchingDirections.IsGrounded)
 
                 rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (walkAcceleration * walkDirectionVector.x), -maxSpeed, maxSpeed), rb.velocity.y);
+            //we start with the normal velocity, then we accelerate the speed in a certain direction, it will slowly reach the max speed on the left, or the max speed on the right, y value stay the same.
             else
                 rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y); ; //slowly transition to 0 when the knight attack
         }

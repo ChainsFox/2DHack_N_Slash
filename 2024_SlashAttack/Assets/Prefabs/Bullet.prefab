@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 40
-  bulletImpact: {fileID: 0}
 --- !u!50 &6420214426583069340
 Rigidbody2D:
   serializedVersion: 4
@@ -177,4 +176,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
-  knockback: {x: 0, y: 1}
+  knockback: {x: 0, y: 0}
