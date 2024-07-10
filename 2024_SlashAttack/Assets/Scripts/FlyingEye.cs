@@ -88,7 +88,7 @@ public class FlyingEye : MonoBehaviour
     private void Flight()
     {
         //fly to the next way point
-        Vector2 directionToWayPoint = (nextWayPoint.position - transform.position).normalized;
+        Vector2 directionToWayPoint = (nextWayPoint.position - transform.position).normalized;//normalized is use to show direction
 
         //check if we have reached the waypoint already
         float distance = Vector2.Distance(nextWayPoint.position, transform.position);

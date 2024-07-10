@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8707823840700639682}
   - component: {fileID: 7711274949215038126}
-  - component: {fileID: 5195044176888503120}
+  - component: {fileID: 6323099750545789446}
   m_Layer: 10
   m_Name: BiteAttack
   m_TagString: Untagged
@@ -285,10 +285,10 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22325152, y: -0.20724964}
-  m_Size: {x: 1.0415038, y: 1.0415038}
+  m_Offset: {x: -0.32652855, y: -0.22899234}
+  m_Size: {x: 0.900177, y: 0.9980185}
   m_Direction: 0
---- !u!114 &5195044176888503120
+--- !u!114 &6323099750545789446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 2, y: 2}
+  knockback: {x: 0, y: 0}
 --- !u!1 &8312239027101547935
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +383,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15989536, y: -0.12814254}
-  m_Size: {x: 1.1682161, y: 1.1997179}
+  m_Offset: {x: -0.3265285, y: -0.2289923}
+  m_Size: {x: 0.900177, y: 0.9980185}
   m_Direction: 0
