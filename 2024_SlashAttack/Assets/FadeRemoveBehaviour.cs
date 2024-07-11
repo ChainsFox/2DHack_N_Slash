@@ -24,7 +24,7 @@ public class FadeRemoveBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (fadeDelay > fadeDelayElapsed)
+        if (fadeDelay > fadeDelayElapsed)//when fadeDelayElapsed is higher than fade delay, it will move on to else, we just making it wait a certain amount of time
         {
             fadeDelayElapsed += Time.deltaTime;
         }
