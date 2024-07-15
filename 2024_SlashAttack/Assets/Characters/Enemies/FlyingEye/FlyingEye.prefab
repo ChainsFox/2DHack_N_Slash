@@ -188,8 +188,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   childObject: {fileID: 8312239027101547935}
-  _maxHealth: 50
-  _health: 50
+  _maxHealth: 100
+  _health: 100
   isInvincible: 0
   invincibilityTime: 0.25
   _isAlive: 1
