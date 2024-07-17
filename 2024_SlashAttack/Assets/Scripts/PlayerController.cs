@@ -119,6 +119,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
+
     public bool IsAlive
     {
         get
@@ -199,7 +207,7 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         //TODO: Check if alive as well
-        if (context.started && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
+        if (context.started && touchingDiretionsPlayer.IsGrounded && IsAlive==true)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);

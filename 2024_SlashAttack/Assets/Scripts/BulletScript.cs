@@ -9,6 +9,13 @@ public class BulletScript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private float destroyTimer;
+    AudioSource bulletSFX;
+
+    void Awake()
+    {
+        bulletSFX = GetComponent<AudioSource>();
+    }
+
 
     // Start is called before the first frame update
     private void Start()
@@ -21,7 +28,12 @@ public class BulletScript : MonoBehaviour
         rb.velocity = new Vector2 (direction.x, direction.y).normalized * force;//normalized so that whether the mouse cursor is far or near the speed will not change
         float rot = Mathf.Atan2(rotation.x, rotation.y) * Mathf.Rad2Deg;//to get a degree float(this is math stuff so is pretty hard to grasp)
         transform.rotation = Quaternion.Euler(0,0,rot + 90);//plus 90 so our bullet is straight not sideway
+        if(bulletSFX)
+        {
+            AudioSource.PlayClipAtPoint(bulletSFX.clip, gameObject.transform.position, bulletSFX.volume);
 
+        }
+        //AudioSource.PlayClipAtPoint(bulletSFX.clip, gameObject.transform.position, bulletSFX.volume);
 
     }
 

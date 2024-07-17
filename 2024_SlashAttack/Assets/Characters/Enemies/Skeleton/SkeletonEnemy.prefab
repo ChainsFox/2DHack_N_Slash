@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27af519bc14c004d8ea433628c78611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkAcceleration: 3
+  walkAcceleration: 50
   maxSpeed: 3
   walkStopRate: 0.05
   attackZone: {fileID: 6268987946657810210}
@@ -260,9 +260,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   childObject: {fileID: 1051892890765090026}
-  rb: {fileID: 0}
-  _maxHealth: 200
-  _health: 200
+  _maxHealth: 150
+  _health: 150
   isInvincible: 0
   invincibilityTime: 0.25
   _isAlive: 1
@@ -331,7 +330,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0281148, y: -0.1194824}
+  m_Offset: {x: 1.0281148, y: -0.30487096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -342,7 +341,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.8242655, y: 2.6117685}
+  m_Size: {x: 3.8242655, y: 2.9825456}
   m_EdgeRadius: 0
 --- !u!114 &6268987946657810210
 MonoBehaviour:
@@ -567,5 +566,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd046754a92e18d499d4385b952568fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 15
   knockback: {x: 5, y: 2}

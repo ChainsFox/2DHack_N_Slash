@@ -9,6 +9,13 @@ public class SlashScript : MonoBehaviour
     private Rigidbody2D rb;
     private float destroyTimer;
     private Collider2D coll;
+    AudioSource slashSFX;
+
+    void Awake()
+    {
+        slashSFX = GetComponent<AudioSource>();
+    }
+
 
     // Start is called before the first frame update
     private void Start()
@@ -22,12 +29,17 @@ public class SlashScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);//plus 90 so our bullet is straight not sideway
         //
         coll = GetComponent<Collider2D>();
+        if (slashSFX)//if slash sfx is not null(!=null)
+        {
+            AudioSource.PlayClipAtPoint(slashSFX.clip, gameObject.transform.position, slashSFX.volume);
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         destroyTimer += Time.deltaTime;
         if (destroyTimer > 0.35f)
         {
