@@ -21,7 +21,7 @@ public class HealthPickup : MonoBehaviour
     {
         Damageable damageable = collision.GetComponent<Damageable>();//health logic
 
-        if (damageable && damageable.Health < damageable.MaxHealth)
+        if (damageable && damageable.Health < damageable.MaxHealth)//if is it damageable and if the health < max health, then we can heal
         {
             bool wasHealed = damageable.Heal(healthRestore);
 

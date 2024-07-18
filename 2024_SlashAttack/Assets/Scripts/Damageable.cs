@@ -8,6 +8,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
+    //new:
     public GameObject childObject;
     public Rigidbody2D rb;
 
