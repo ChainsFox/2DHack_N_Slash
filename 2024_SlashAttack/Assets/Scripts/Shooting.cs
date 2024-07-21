@@ -13,7 +13,15 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
- 
+    //
+    private bool holdButton = false;
+    
+
+    private void Awake()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,17 +50,18 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && canFire)
-        {
-            canFire = false;
-            Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
-        }
-        else if(Input.GetMouseButton(1) && canFire)
-        {
-            canFire = false;
-            Instantiate(slash, bulltetTransform.position, Quaternion.identity);
-        }
 
+        //OLD INPUT SYSTEM:
+        //if (Input.GetMouseButton(0) && canFire)
+        //{
+        //    canFire = false;
+        //    Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
+        //}
+        //else if(Input.GetMouseButton(1) && canFire)
+        //{
+        //    canFire = false;
+        //    Instantiate(slash, bulltetTransform.position, Quaternion.identity);
+        //}
 
 
 
@@ -60,12 +69,29 @@ public class Shooting : MonoBehaviour
 
 
     }
-    
-    //public void OnShoot(InputAction.CallbackContext context)
-    //{
-    //    canFire = false;
-    //    Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
-    //}
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if(context.started && canFire)
+        {
+            canFire = false;
+            Instantiate(slash, bulltetTransform.position, Quaternion.identity);
+        }
+
+      
+    }
+
+
+
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        if (context.started && canFire)
+        {
+            canFire = false;
+            Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
+        }
+
+    }
 
 
 }

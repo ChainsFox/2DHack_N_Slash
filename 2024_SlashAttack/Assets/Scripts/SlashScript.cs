@@ -41,7 +41,7 @@ public class SlashScript : MonoBehaviour
     {
         
         destroyTimer += Time.deltaTime;
-        if (destroyTimer > 0.35f)
+        if (destroyTimer > 0.33f)
         {
             Destroy(gameObject);
             Destroy(coll);
