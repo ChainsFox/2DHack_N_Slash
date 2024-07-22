@@ -33,18 +33,20 @@ public class BulletScript : MonoBehaviour
             AudioSource.PlayClipAtPoint(bulletSFX.clip, gameObject.transform.position, bulletSFX.volume);
 
         }
-        //AudioSource.PlayClipAtPoint(bulletSFX.clip, gameObject.transform.position, bulletSFX.volume);
+        //New destroy logic
+        Destroy(gameObject, 1.2f);
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        destroyTimer += Time.deltaTime;
-        if (destroyTimer > 1.2f)
-        {
-            Destroy(gameObject);
-        }
+        //destroyTimer += Time.deltaTime;
+        //if (destroyTimer > 1.2f)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

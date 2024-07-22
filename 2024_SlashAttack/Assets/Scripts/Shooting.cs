@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class Shooting : MonoBehaviour
 {
@@ -12,10 +13,11 @@ public class Shooting : MonoBehaviour
     public Transform bulltetTransform;
     public bool canFire;
     private float timer;
-    public float timeBetweenFiring;
+    public float timeBetweenFiring; //0.3f
     //
-    private bool holdButton = false;
-    
+    public bool holdAttack = false;
+    public bool holdShoot = false;
+
 
     private void Awake()
     {
@@ -50,6 +52,19 @@ public class Shooting : MonoBehaviour
             }
         }
 
+        if(holdAttack==true && canFire)
+        {
+            canFire = false;
+            Instantiate(slash, bulltetTransform.position, Quaternion.identity);
+        }
+
+        if (holdShoot == true && canFire)
+        {
+            canFire = false;
+            Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
+        }
+
+
 
         //OLD INPUT SYSTEM:
         //if (Input.GetMouseButton(0) && canFire)
@@ -61,34 +76,38 @@ public class Shooting : MonoBehaviour
         //{
         //    canFire = false;
         //    Instantiate(slash, bulltetTransform.position, Quaternion.identity);
-        //}
-
-
-
-
+        //} 
 
 
     }
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if(context.started && canFire)
+        if(context.started)
         {
-            canFire = false;
-            Instantiate(slash, bulltetTransform.position, Quaternion.identity);
-        }
+            holdAttack=true;
 
-      
+        }
+        if(context.canceled)
+        {
+            holdAttack=false;
+        }
+   
+        
     }
 
 
 
     public void OnShoot(InputAction.CallbackContext context)
     {
-        if (context.started && canFire)
+        if (context.started)
         {
-            canFire = false;
-            Instantiate(bullet, bulltetTransform.position, Quaternion.identity);
+            holdShoot = true;
+
+        }
+        if (context.canceled)
+        {
+            holdShoot = false;
         }
 
     }

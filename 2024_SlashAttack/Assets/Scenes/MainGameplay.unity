@@ -1722,6 +1722,8 @@ MonoBehaviour:
   bulltetTransform: {fileID: 1856183042}
   canFire: 1
   timeBetweenFiring: 0.3
+  holdAttack: 0
+  holdShoot: 0
 --- !u!1 &1054883438
 GameObject:
   m_ObjectHideFlags: 0

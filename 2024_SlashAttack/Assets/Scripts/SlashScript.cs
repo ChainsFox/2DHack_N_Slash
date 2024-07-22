@@ -31,8 +31,12 @@ public class SlashScript : MonoBehaviour
         coll = GetComponent<Collider2D>();
         if (slashSFX)//if slash sfx is not null(!=null)
         {
+            //slashSFX.Play(); //useable but only for slash object
             AudioSource.PlayClipAtPoint(slashSFX.clip, gameObject.transform.position, slashSFX.volume);
         }
+        //New destroy logic
+        Destroy(gameObject,0.33f);
+        Destroy(coll,0.33f);
 
     }
 
@@ -40,12 +44,12 @@ public class SlashScript : MonoBehaviour
     void Update()
     {
         
-        destroyTimer += Time.deltaTime;
-        if (destroyTimer > 0.33f)
-        {
-            Destroy(gameObject);
-            Destroy(coll);
-        }
+        //destroyTimer += Time.deltaTime;
+        //if (destroyTimer > 0.33f)
+        //{
+        //    Destroy(gameObject);
+        //    Destroy(coll);
+        //}
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)
