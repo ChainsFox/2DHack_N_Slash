@@ -1763,6 +1763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4495800508825615063, guid: efab81124173c574fad367f20b9ed906, type: 3}
+      propertyPath: impactEffect
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4537272830758403747, guid: efab81124173c574fad367f20b9ed906, type: 3}
       propertyPath: m_Name
       value: Bullet

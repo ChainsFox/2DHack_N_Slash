@@ -10,16 +10,20 @@ public class BulletScript : MonoBehaviour
     public float force;
     private float destroyTimer;
     AudioSource bulletSFX;
+    //
+    private Animator anim;
 
     void Awake()
     {
         bulletSFX = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
     }
 
 
     // Start is called before the first frame update
     private void Start()
     {
+
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -51,6 +55,8 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject); //does work
+        rb.bodyType = RigidbodyType2D.Static;
+        anim.SetTrigger("impact");
+        Destroy(gameObject,0.3f); //does work
     }
 }
