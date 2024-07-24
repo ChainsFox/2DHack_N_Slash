@@ -7,7 +7,7 @@ public class SlashScript : MonoBehaviour
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;
-    private float destroyTimer;
+    //private float destroyTimer;
     private Collider2D coll;
     AudioSource slashSFX;
 

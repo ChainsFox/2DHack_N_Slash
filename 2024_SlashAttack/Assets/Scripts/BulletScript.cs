@@ -8,7 +8,7 @@ public class BulletScript : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
-    private float destroyTimer;
+    //private float destroyTimer;
     AudioSource bulletSFX;
     //
     private Animator anim;

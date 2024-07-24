@@ -19,10 +19,15 @@ public class PlayerController : MonoBehaviour
     //public float airWalkSpeed = 18f;
     public float jumpImpulse = 10f;
     Damageable damageable;
+    TouchingDirectionsPlayer touchingDiretionsPlayer;
     //new stuff
     private SpriteRenderer sprite;
+    [Header("Dash Settings")]
+    [SerializeField] float dashSpeed = 10f;
+    [SerializeField] float dashDuration = 0.5f;
+    [SerializeField] float dashCooldown = 1f;
 
-    TouchingDirectionsPlayer touchingDiretionsPlayer;
+
 
     private void Awake()
     {
