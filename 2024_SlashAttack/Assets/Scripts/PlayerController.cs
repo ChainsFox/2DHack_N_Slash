@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float dashSpeed = 10f;
     [SerializeField] float dashDuration = 0.5f;
     [SerializeField] float dashCooldown = 1f;
+    public Vector2 moveDirection;
+    public bool isDashing;
+    public bool canDash = true;
 
 
 
@@ -40,6 +44,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //if (isDashing)
+        //{
+        //    return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
+        //}
+
         if (!damageable.LockVelocity)//if the character is not hit(=false) then we can move, if we get hit we cant update the velocity base on our input(aka you cant move)
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
@@ -52,7 +61,20 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
+        float moveX = rb.velocity.x;
+        float moveY = rb.velocity.y;
+        moveDirection = new Vector2(moveX, moveY).normalized;
 
+    }
+
+    private void Update()
+    {
+        //if (isDashing)
+        //{
+        //    return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
+        //}
+
+     
     }
 
     //public bool _isFacingRight = true;
@@ -66,7 +88,7 @@ public class PlayerController : MonoBehaviour
     //        {
     //            //flip the local scale to make the player face the opposite direction
     //            transform.localScale *= new Vector2(-1, 1);
-                 
+
 
     //        }
     //        _isFacingRight = value;
@@ -193,6 +215,9 @@ public class PlayerController : MonoBehaviour
         {
             IsMoving = false;
         }
+        //float moveX = moveInput.x;
+        //float moveY = moveInput.y;
+        //moveDirection = new Vector2(moveX, moveY).normalized;
 
     }
 
@@ -223,6 +248,27 @@ public class PlayerController : MonoBehaviour
     public void OnHit(int damge, Vector2 knockback)
     {
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        //if(context.started && canDash)
+        //{
+        //    StartCoroutine(Dash());
+        //}
+        StartCoroutine(Dash());
+
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        rb.velocity = new Vector2(moveDirection.x * dashSpeed, moveDirection.y * dashSpeed);
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
 
