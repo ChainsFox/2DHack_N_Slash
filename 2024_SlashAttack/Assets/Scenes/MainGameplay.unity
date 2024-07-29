@@ -1583,9 +1583,12 @@ MonoBehaviour:
   walkSpeed: 12
   runSpeed: 18
   jumpImpulse: 20
-  dashSpeed: 10
+  dashSpeed: 40
   dashDuration: 0.5
-  dashCooldown: 1
+  dashCooldown: 0
+  moveDirection: {x: 0, y: 0}
+  isDashing: 0
+  canDash: 1
   _isMoving: 0
   _isRunning: 0
 --- !u!114 &987332931

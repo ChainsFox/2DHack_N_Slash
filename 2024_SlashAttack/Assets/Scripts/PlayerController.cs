@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     //new stuff
     private SpriteRenderer sprite;
     [Header("Dash Settings")]
-    [SerializeField] float dashSpeed = 10f;
+    [SerializeField] float dashSpeed = 40f;
     [SerializeField] float dashDuration = 0.5f;
     [SerializeField] float dashCooldown = 1f;
     public Vector2 moveDirection;
@@ -49,6 +49,15 @@ public class PlayerController : MonoBehaviour
         //    return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
         //}
 
+        //DASH:
+        //new input(test) - need to tune for dash logic
+        //float moveX = rb.velocity.x;
+        //float moveY = rb.velocity.y;
+
+        float moveX = moveInput.x;
+        float moveY = moveInput.y;
+
+
         if (!damageable.LockVelocity)//if the character is not hit(=false) then we can move, if we get hit we cant update the velocity base on our input(aka you cant move)
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
@@ -61,8 +70,8 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
-        float moveX = rb.velocity.x;
-        float moveY = rb.velocity.y;
+
+        //DASH:
         moveDirection = new Vector2(moveX, moveY).normalized;
 
     }
@@ -74,7 +83,6 @@ public class PlayerController : MonoBehaviour
         //    return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
         //}
 
-     
     }
 
     //public bool _isFacingRight = true;
@@ -206,6 +214,7 @@ public class PlayerController : MonoBehaviour
     {
 
         moveInput = context.ReadValue<Vector2>();
+
         if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
@@ -215,9 +224,7 @@ public class PlayerController : MonoBehaviour
         {
             IsMoving = false;
         }
-        //float moveX = moveInput.x;
-        //float moveY = moveInput.y;
-        //moveDirection = new Vector2(moveX, moveY).normalized;
+
 
     }
 
@@ -252,11 +259,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        //if(context.started && canDash)
-        //{
-        //    StartCoroutine(Dash());
-        //}
-        StartCoroutine(Dash());
+        if (context.started && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+        //StartCoroutine(Dash());
 
     }
 
