@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using static UnityEngine.Rendering.DebugUI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer), typeof(Damageable))]
@@ -21,12 +23,14 @@ public class PlayerController : MonoBehaviour
     public float jumpImpulse = 10f;
     Damageable damageable;
     TouchingDirectionsPlayer touchingDiretionsPlayer;
-    //new stuff
+    //new stuff(for flipping character)
     private SpriteRenderer sprite;
+    //Dash
     [Header("Dash Settings")]
-    [SerializeField] float dashSpeed = 40f;
+    [SerializeField] float dashSpeed = 20f;
     [SerializeField] float dashDuration = 0.5f;
     [SerializeField] float dashCooldown = 1f;
+    [SerializeField] private TrailRenderer tr;
     public Vector2 moveDirection;
     public bool isDashing;
     public bool canDash = true;
@@ -40,48 +44,61 @@ public class PlayerController : MonoBehaviour
         touchingDiretionsPlayer = GetComponent<TouchingDirectionsPlayer>();
         sprite = GetComponent<SpriteRenderer>();
         damageable = GetComponent<Damageable>();
+        tr = GetComponent<TrailRenderer>();
     }
 
     private void FixedUpdate()
     {
-        //if (isDashing)
-        //{
-        //    return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
-        //}
 
-        //DASH:
-        //new input(test) - need to tune for dash logic
-        //float moveX = rb.velocity.x;
-        //float moveY = rb.velocity.y;
-
-        float moveX = moveInput.x;
-        float moveY = moveInput.y;
+        if (isDashing)
+        {
+            return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
+        }
 
 
         if (!damageable.LockVelocity)//if the character is not hit(=false) then we can move, if we get hit we cant update the velocity base on our input(aka you cant move)
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
-        //sprite.flipX = rb.velocity.x < 0f; //new way to flip the player if i want dont want to affect the "Shooting" script
-        if(rb.velocity.x < 0)
+
+        //new way to flip the player if i want dont want to affect the "Shooting" script
+        if (rb.velocity.x < 0)
         {
             sprite.flipX = true;
         }
-        if(rb.velocity.x > 0) 
+        if (rb.velocity.x > 0)
         {
             sprite.flipX = false;
         }
 
         //DASH:
+        float moveX = moveInput.x;
+        float moveY = moveInput.y;
         moveDirection = new Vector2(moveX, moveY).normalized;
 
-    }
+        if (moveDirection == Vector2.zero)//if we standing still it will dash base on which direction our character is facing
+        {
+            if (sprite.flipX == true)
+            {
+                moveDirection = new Vector2(-1, 0f);
+            }
+            else if (sprite.flipX == false)
+            {
+                moveDirection = new Vector2(1, 0f);
+            }
 
-    private void Update()
-    {
-        //if (isDashing)
+        }
+        //up and down dash reduce(if we ever decided that the up and down dash is too much, this is one way of reducing it)
+        //if(moveDirection.x == 0f && (moveDirection.y == 1f || moveDirection.y == -1f))
         //{
-        //    return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
+        //    rb.drag = 2f;
+        //    dashSpeed = 30f;
         //}
+        //else
+        //{
+        //    dashSpeed = 30f;
+        //}
+
+
 
     }
 
@@ -122,30 +139,30 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
-                if (IsMoving /*&& !touchingDiretions.IsOnWall*/) //03/05/2024-NEW: The player can freely move fast on the ground or on the air
+            if (IsMoving /*&& !touchingDiretions.IsOnWall*/) //03/05/2024-NEW: The player can freely move fast on the ground or on the air
+            {
+                //if (touchingDiretions.IsGrounded)
+                //{
+                if (IsRunning)
                 {
-                    //if (touchingDiretions.IsGrounded)
-                    //{
-                        if (IsRunning)
-                        {
-                            return runSpeed;
-                        }
-                        else
-                        {
-                            return walkSpeed;
-                        }
-                    //}
-                    //else
-                    //{//Air move
-                    //    return airWalkSpeed;
-                    //}
-
+                    return runSpeed;
                 }
                 else
                 {
-                    //idle speed = 0;
-                    return 0;
+                    return walkSpeed;
                 }
+                //}
+                //else
+                //{//Air move
+                //    return airWalkSpeed;
+                //}
+
+            }
+            else
+            {
+                //idle speed = 0;
+                return 0;
+            }
 
 
 
@@ -176,14 +193,17 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
+
             return _isMoving;
 
 
         }
         private set
         {
+
             _isMoving = value;
             animator.SetBool(AnimationStrings.isMoving, value);
+
 
 
 
@@ -210,6 +230,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void OnLookUpDown(InputAction.CallbackContext context)
+    {
+        if (touchingDiretionsPlayer.IsGrounded && IsAlive == true && IsMoving == false)
+        {
+            if (context.started)
+            {
+                animator.SetBool(AnimationStrings.isLooking, true);
+            }
+            else if (context.canceled)
+            {
+                animator.SetBool(AnimationStrings.isLooking, false);
+            }
+        }
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
 
@@ -225,6 +260,10 @@ public class PlayerController : MonoBehaviour
             IsMoving = false;
         }
 
+        if (moveDirection.x == 0f && (moveDirection.y == 1f || moveDirection.y == -1f))
+        {
+            IsMoving = false;
+        }
 
     }
 
@@ -271,8 +310,13 @@ public class PlayerController : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
         rb.velocity = new Vector2(moveDirection.x * dashSpeed, moveDirection.y * dashSpeed);
+        tr.emitting = true;
         yield return new WaitForSeconds(dashDuration);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;

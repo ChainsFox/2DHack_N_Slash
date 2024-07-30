@@ -36,8 +36,8 @@ public class PlayerAttack : MonoBehaviour
             bool gotHit = damageable.Hit(attackDamage, knockback);
 
             //Debug.Log
-            if (gotHit)
-                Debug.Log(collision.name + " hit for " + attackDamage);
+            //if (gotHit)
+            //    Debug.Log(collision.name + " hit for " + attackDamage);
         }
 
     }
