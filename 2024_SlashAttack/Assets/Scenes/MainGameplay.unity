@@ -1371,8 +1371,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12773848, y: -0.1738863}
-  m_Size: {x: 1.0690145, y: 3.2043743}
+  m_Offset: {x: 0.12773848, y: -0.16213441}
+  m_Size: {x: 1.0690145, y: 3.1808705}
   m_Direction: 0
 --- !u!95 &987332928
 Animator:
@@ -1425,18 +1425,6 @@ MonoBehaviour:
       - m_Target: {fileID: 987332930}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 987332930}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnLookUpDown
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1576,6 +1564,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f006c719-96b7-4bc6-b76d-498e4611f722
     m_ActionName: Player/Dash[/Keyboard/alt]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0ca2220e-6871-46ef-a3f3-4e251b72e092
+    m_ActionName: Player/InputLook[/Keyboard/w,/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

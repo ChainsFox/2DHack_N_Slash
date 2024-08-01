@@ -230,20 +230,38 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void OnLookUpDown(InputAction.CallbackContext context)
-    {
-        if (touchingDiretionsPlayer.IsGrounded && IsAlive == true && IsMoving == false)
-        {
-            if (context.started)
-            {
-                animator.SetBool(AnimationStrings.isLooking, true);
-            }
-            else if (context.canceled)
-            {
-                animator.SetBool(AnimationStrings.isLooking, false);
-            }
-        }
-    }
+
+    //BUGGED: if you hold w first, then hold a or d, it will run in place again
+    //public void OnLookUp(InputAction.CallbackContext context)
+    //{
+    //    if (!touchingDiretionsPlayer.IsGrounded)
+    //    {
+    //        animator.SetBool(AnimationStrings.isLooking, false);
+    //        animator.SetBool(AnimationStrings.lockVelocity, false);
+
+    //    }
+    //    if (IsMoving)
+    //    {
+    //        animator.SetBool(AnimationStrings.isLooking, false);
+    //        animator.SetBool(AnimationStrings.lockVelocity, false);
+    //    }
+    //    if (touchingDiretionsPlayer.IsGrounded && !IsMoving)
+    //    {
+
+    //        if (context.started)
+    //        {   
+    //            animator.SetBool(AnimationStrings.isLooking, true);
+    //            animator.SetBool(AnimationStrings.lockVelocity, true);
+    //            animator.SetBool(AnimationStrings.isMoving, false);
+    //        }
+    //        if (context.canceled)
+    //        {
+    //            animator.SetBool(AnimationStrings.isLooking, false);
+    //            animator.SetBool(AnimationStrings.lockVelocity, false);
+    //        }
+
+    //    }
+    //}
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -252,7 +270,9 @@ public class PlayerController : MonoBehaviour
 
         if (IsAlive)
         {
-            IsMoving = moveInput != Vector2.zero;
+            //IsMoving = moveInput != Vector2.zero;
+            IsMoving = moveInput.x != 0f; //for fixing bug running in place
+
             //SetFacingDirection(moveInput);
         }
         else
@@ -260,10 +280,7 @@ public class PlayerController : MonoBehaviour
             IsMoving = false;
         }
 
-        if (moveDirection.x == 0f && (moveDirection.y == 1f || moveDirection.y == -1f))
-        {
-            IsMoving = false;
-        }
+
 
     }
 
