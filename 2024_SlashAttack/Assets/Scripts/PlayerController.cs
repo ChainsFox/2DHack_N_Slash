@@ -27,13 +27,18 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sprite;
     //Dash
     [Header("Dash Settings")]
-    [SerializeField] float dashSpeed = 20f;
-    [SerializeField] float dashDuration = 0.5f;
-    [SerializeField] float dashCooldown = 1f;
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.5f;
+    [SerializeField] private float dashCooldown = 1f;
     [SerializeField] private TrailRenderer tr;
     public Vector2 moveDirection;
     public bool isDashing;
     public bool canDash = true;
+    //CROUCH
+    [SerializeField] private bool isCrouching;
+    [SerializeField] Collider2D standingColl;
+    [SerializeField] Collider2D crouchingColl;
+    public float crouchSpeed = 10f;
 
 
 
@@ -143,10 +148,14 @@ public class PlayerController : MonoBehaviour
             {
                 //if (touchingDiretions.IsGrounded)
                 //{
+                if (touchingDiretionsPlayer.IsGrounded && isCrouching)
+                {
+                    return crouchSpeed;//test
+                }
                 if (IsRunning)
                 {
                     return runSpeed;
-                }
+                }           
                 else
                 {
                     return walkSpeed;
@@ -156,6 +165,7 @@ public class PlayerController : MonoBehaviour
                 //{//Air move
                 //    return airWalkSpeed;
                 //}
+              
 
             }
             else
@@ -229,6 +239,26 @@ public class PlayerController : MonoBehaviour
 
 
     }
+    //CROUCH
+    //[SerializeField]
+    //private bool _isCrouching = false;
+
+    //public bool IsCrouching
+    //{
+    //    get
+    //    {
+    //        return _isCrouching;
+
+    //    }
+    //    set
+    //    {
+    //        _isCrouching = value;
+    //        animator.SetBool(AnimationStrings.isCrouching, value);
+
+    //    }
+
+
+    //}
 
 
     //BUGGED: if you hold w first, then hold a or d, it will run in place again
@@ -262,6 +292,26 @@ public class PlayerController : MonoBehaviour
 
     //    }
     //}
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+        if(IsAlive && touchingDiretionsPlayer.IsGrounded)
+        {
+
+            if (context.started)
+            {
+                isCrouching = true;
+                standingColl.enabled = false;
+                crouchingColl.enabled = true;
+            }
+            else
+            {
+                isCrouching = false;
+                standingColl.enabled = true;
+                crouchingColl.enabled = false;
+            }
+        }
+
+}
 
     public void OnMove(InputAction.CallbackContext context)
     {

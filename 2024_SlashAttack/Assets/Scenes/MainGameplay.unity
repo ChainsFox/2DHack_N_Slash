@@ -1230,6 +1230,7 @@ GameObject:
   - component: {fileID: 987332924}
   - component: {fileID: 987332926}
   - component: {fileID: 987332927}
+  - component: {fileID: 987332935}
   - component: {fileID: 987332928}
   - component: {fileID: 987332930}
   - component: {fileID: 987332929}
@@ -1568,6 +1569,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 0ca2220e-6871-46ef-a3f3-4e251b72e092
     m_ActionName: Player/InputLook[/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 987332930}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnCrouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9ef1b8cd-5cb1-4679-bf82-be565f032750
+    m_ActionName: Player/Crouch[/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1595,8 +1612,13 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0}
   isDashing: 0
   canDash: 1
+  isCrouching: 0
+  standingColl: {fileID: 987332927}
+  crouchingColl: {fileID: 987332935}
+  crouchSpeed: 10
   _isMoving: 0
   _isRunning: 0
+  _isCrouching: 0
 --- !u!114 &987332931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,6 +1835,41 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!70 &987332935
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987332923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12773848, y: -0.8741348}
+  m_Size: {x: 1.0690145, y: 1.7568698}
+  m_Direction: 0
 --- !u!1 &1034777308
 GameObject:
   m_ObjectHideFlags: 0
