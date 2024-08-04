@@ -35,10 +35,12 @@ public class PlayerController : MonoBehaviour
     public bool isDashing;
     public bool canDash = true;
     //CROUCH
-    [SerializeField] private bool isCrouching;
-    [SerializeField] Collider2D standingColl;
-    [SerializeField] Collider2D crouchingColl;
     public float crouchSpeed = 10f;
+    [SerializeField] private bool isCrouching;
+    [SerializeField] CapsuleCollider2D playerColl;
+    //[SerializeField] Collider2D crouchingColl;
+    public Vector2 standingSize;
+    public Vector2 crouchingSize;
 
 
 
@@ -50,6 +52,8 @@ public class PlayerController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         damageable = GetComponent<Damageable>();
         tr = GetComponent<TrailRenderer>();
+        playerColl = GetComponent<CapsuleCollider2D>();
+        standingSize = playerColl.size;
     }
 
     private void FixedUpdate()
@@ -103,6 +107,18 @@ public class PlayerController : MonoBehaviour
         //    dashSpeed = 30f;
         //}
 
+        if (touchingDiretionsPlayer.IsGrounded)
+        {
+            //standingColl.enabled = !isCrouching;
+            if(isCrouching)
+            {
+                playerColl.size = crouchingSize;
+            }
+            else if(!isCrouching)
+            {
+                playerColl.size = standingSize;
+            }
+        }
 
 
     }
@@ -148,10 +164,11 @@ public class PlayerController : MonoBehaviour
             {
                 //if (touchingDiretions.IsGrounded)
                 //{
-                if (touchingDiretionsPlayer.IsGrounded && isCrouching)
-                {
-                    return crouchSpeed;//test
-                }
+
+                //if (touchingDiretionsPlayer.IsGrounded && isCrouching)
+                //{
+                //    return crouchSpeed;//test
+                //}
                 if (IsRunning)
                 {
                     return runSpeed;
@@ -294,22 +311,14 @@ public class PlayerController : MonoBehaviour
     //}
     public void OnCrouch(InputAction.CallbackContext context)
     {
-        if(IsAlive && touchingDiretionsPlayer.IsGrounded)
-        {
-
             if (context.started)
             {
                 isCrouching = true;
-                standingColl.enabled = false;
-                crouchingColl.enabled = true;
             }
-            else
+            else if(context.canceled)
             {
                 isCrouching = false;
-                standingColl.enabled = true;
-                crouchingColl.enabled = false;
             }
-        }
 
 }
 

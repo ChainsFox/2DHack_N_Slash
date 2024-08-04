@@ -356,7 +356,7 @@
                     "name": "",
                     "id": "3bae2d20-bf1f-4e9a-acfc-e8c9e793eab6",
                     "path": "<Keyboard>/s",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
