@@ -40,9 +40,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] CapsuleCollider2D playerColl;
     //[SerializeField] Collider2D crouchingColl;
     public Vector2 standingSize;
-    public Vector2 crouchingSize;
+    public Vector2 crouchingSize; //in the editor
+    public Vector2 standingOffset;
+    public Vector2 crouchOffset;
 
-
+    //0.1277385 -0.2145218 (standing offset)
+    //0.1277385 -0.7 (crouching offset)
 
     private void Awake()
     {
@@ -54,7 +57,14 @@ public class PlayerController : MonoBehaviour
         tr = GetComponent<TrailRenderer>();
         playerColl = GetComponent<CapsuleCollider2D>();
         standingSize = playerColl.size;
+
     }
+
+    public Sprite CreateSpriteWithPivot(Sprite existingSprite, Vector2 pivot)
+    {
+        return Sprite.Create(existingSprite.texture, existingSprite.rect, pivot);
+    }
+
 
     private void FixedUpdate()
     {
@@ -96,6 +106,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+
         //up and down dash reduce(if we ever decided that the up and down dash is too much, this is one way of reducing it)
         //if(moveDirection.x == 0f && (moveDirection.y == 1f || moveDirection.y == -1f))
         //{
@@ -107,16 +118,21 @@ public class PlayerController : MonoBehaviour
         //    dashSpeed = 30f;
         //}
 
+
+
+        //CROUCH 
         if (touchingDiretionsPlayer.IsGrounded)
         {
             //standingColl.enabled = !isCrouching;
-            if(isCrouching)
+            if (isCrouching)
             {
                 playerColl.size = crouchingSize;
+                playerColl.offset = crouchOffset;
             }
             else if(!isCrouching)
             {
                 playerColl.size = standingSize;
+                playerColl.offset = standingOffset;
             }
         }
 

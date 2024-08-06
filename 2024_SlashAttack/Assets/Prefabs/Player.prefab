@@ -74,7 +74,7 @@ GameObject:
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -205,8 +205,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12773848, y: -0.16213441}
-  m_Size: {x: 1.0690145, y: 3.1808705}
+  m_Offset: {x: 0.12773848, y: -0.21452177}
+  m_Size: {x: 1.0690145, y: 3.1663296}
   m_Direction: 0
 --- !u!95 &2806470368873249133
 Animator:
@@ -254,8 +254,8 @@ MonoBehaviour:
   crouchSpeed: 10
   isCrouching: 0
   playerColl: {fileID: 0}
-  standingSize: {x: 1.069015, y: 3.180871}
-  crouchingSize: {x: 1.069015, y: 1.767302}
+  standingSize: {x: 1.069015, y: 3.16633}
+  crouchingSize: {x: 1.069015, y: 2.172534}
   _isMoving: 0
   _isRunning: 0
 --- !u!114 &5728064347398645439
