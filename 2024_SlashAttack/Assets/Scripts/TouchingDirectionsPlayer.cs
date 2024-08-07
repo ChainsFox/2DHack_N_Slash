@@ -14,7 +14,7 @@ public class TouchingDirectionsPlayer : MonoBehaviour
     CapsuleCollider2D touchingCol;
     RaycastHit2D[] groundHits = new RaycastHit2D[5];
     //RaycastHit2D[] wallHits = new RaycastHit2D[5];
-    //RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
+    RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
 
     Animator animator;
 

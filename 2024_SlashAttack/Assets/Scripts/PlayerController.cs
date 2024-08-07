@@ -43,6 +43,9 @@ public class PlayerController : MonoBehaviour
     public Vector2 crouchingSize; //in the editor
     public Vector2 standingOffset;
     public Vector2 crouchOffset;
+    [SerializeField] Transform overheadCheckCollider;
+    public float overheadCheckRadius = 0.2f;
+    [SerializeField] LayerMask groundLayer;
 
     //0.1277385 -0.2145218 (standing offset)
     //0.1277385 -0.7 (crouching offset)
@@ -134,7 +137,26 @@ public class PlayerController : MonoBehaviour
                 playerColl.size = standingSize;
                 playerColl.offset = standingOffset;
             }
+            else
+            {
+                playerColl.size = standingSize;
+                playerColl.offset = standingOffset;
+            }
         }
+
+        if (!isCrouching)//error
+        {
+            if (Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer))
+            {
+                isCrouching = true;
+
+            }
+            else
+            {
+                isCrouching = false;
+            }
+        }
+
 
 
     }
@@ -336,7 +358,7 @@ public class PlayerController : MonoBehaviour
                 isCrouching = false;
             }
 
-}
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {

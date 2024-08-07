@@ -256,6 +256,8 @@ MonoBehaviour:
   playerColl: {fileID: 0}
   standingSize: {x: 1.069015, y: 3.16633}
   crouchingSize: {x: 1.069015, y: 2.172534}
+  standingOffset: {x: 0.1277385, y: -0.2145218}
+  crouchOffset: {x: 0.1277385, y: -0.7}
   _isMoving: 0
   _isRunning: 0
 --- !u!114 &5728064347398645439
