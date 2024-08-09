@@ -12,10 +12,9 @@ using static UnityEngine.Rendering.DebugUI;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
-
+    [Header("Horizontal Movement")]
     Rigidbody2D rb;
     Animator animator;
-    [Header("Horizontal Movement")]
     Vector2 moveInput;
     public float walkSpeed = 12f;
     public float runSpeed = 18f;
@@ -23,10 +22,12 @@ public class PlayerController : MonoBehaviour
     public float jumpImpulse = 10f;
     Damageable damageable;
     TouchingDirectionsPlayer touchingDiretionsPlayer;
+    //TouchingDirections touchingDiretions;
+
     //new stuff(for flipping character)
     private SpriteRenderer sprite;
     //Dash
-    [Header("Dash Settings")]
+    [Header("DASH Settings")]
     [SerializeField] private float dashSpeed = 20f;
     [SerializeField] private float dashDuration = 0.5f;
     [SerializeField] private float dashCooldown = 1f;
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     public bool isDashing;
     public bool canDash = true;
     //CROUCH
+    [Header("CROUCH Settings")]
     public float crouchSpeed = 10f;
     [SerializeField] private bool isCrouching;
     [SerializeField] CapsuleCollider2D playerColl;
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDiretionsPlayer = GetComponent<TouchingDirectionsPlayer>();
+        //touchingDiretions = GetComponent<TouchingDirections>();
         sprite = GetComponent<SpriteRenderer>();
         damageable = GetComponent<Damageable>();
         tr = GetComponent<TrailRenderer>();
@@ -63,15 +66,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public Sprite CreateSpriteWithPivot(Sprite existingSprite, Vector2 pivot)
-    {
-        return Sprite.Create(existingSprite.texture, existingSprite.rect, pivot);
-    }
-
 
     private void FixedUpdate()
     {
-
+     
         if (isDashing)
         {
             return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
@@ -124,9 +122,30 @@ public class PlayerController : MonoBehaviour
 
 
         //CROUCH 
-        if (touchingDiretionsPlayer.IsGrounded)
+
+        bool overheadHit = Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer);
+
+        if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
         {
             //standingColl.enabled = !isCrouching;
+            if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
+            {
+                if (overheadHit)
+                {
+                    isCrouching = true;
+
+                }
+            }
+
+            //only work if you are already under it at the start of the game
+            //if(isCrouching) 
+            //{
+            //    if(!overheadHit)
+            //    {
+            //        isCrouching = false;
+            //    }
+            //}
+
             if (isCrouching)
             {
                 playerColl.size = crouchingSize;
@@ -137,30 +156,18 @@ public class PlayerController : MonoBehaviour
                 playerColl.size = standingSize;
                 playerColl.offset = standingOffset;
             }
-            else
-            {
-                playerColl.size = standingSize;
-                playerColl.offset = standingOffset;
-            }
         }
 
-        if (!isCrouching)//error
-        {
-            if (Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer))
-            {
-                isCrouching = true;
 
-            }
-            else
-            {
-                isCrouching = false;
-            }
-        }
+
+
+
 
 
 
     }
 
+    
     //public bool _isFacingRight = true;
 
     //public bool IsFacingRight
@@ -353,7 +360,7 @@ public class PlayerController : MonoBehaviour
             {
                 isCrouching = true;
             }
-            else if(context.canceled)
+            else if (context.canceled)
             {
                 isCrouching = false;
             }
@@ -397,6 +404,7 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         //TODO: Check if alive as well
+        isCrouching = false;
         if (context.started && touchingDiretionsPlayer.IsGrounded && IsAlive==true)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
