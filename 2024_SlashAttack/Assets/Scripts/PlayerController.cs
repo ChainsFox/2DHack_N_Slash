@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
         if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
         {
             //standingColl.enabled = !isCrouching;
+            //lOGIC: if we are under an object, but we release crouch, it will still remain crouching
             if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
             {
                 if (overheadHit)
@@ -135,9 +136,11 @@ public class PlayerController : MonoBehaviour
                     isCrouching = true;
 
                 }
+
             }
 
-            //only work if you are already under it at the start of the game
+
+            //only work if you are already under an object at the start of the game, and then you cant crouch ever again(auto release crouch attempt failed)
             //if(isCrouching) 
             //{
             //    if(!overheadHit)

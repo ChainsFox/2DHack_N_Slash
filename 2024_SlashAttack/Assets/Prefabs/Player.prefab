@@ -258,6 +258,11 @@ MonoBehaviour:
   crouchingSize: {x: 1.069015, y: 2.172534}
   standingOffset: {x: 0.1277385, y: -0.2145218}
   crouchOffset: {x: 0.1277385, y: -0.7}
+  overheadCheckCollider: {fileID: 0}
+  overheadCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
   _isMoving: 0
   _isRunning: 0
 --- !u!114 &5728064347398645439
