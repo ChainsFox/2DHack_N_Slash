@@ -65,7 +65,49 @@ public class PlayerController : MonoBehaviour
         standingSize = playerColl.size;
 
     }
+    private void Update()
+    {
+        ////CROUCH 
+        bool overheadHit = Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer);
 
+        if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
+        {
+            //standingColl.enabled = !isCrouching;
+            //lOGIC: if we are under an object, but we release crouch, it will still remain crouching
+            if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
+            {
+
+                if (overheadHit)
+                {
+                    IsCrouched = true;
+                    isCrouching = true;
+
+                }
+
+            }
+
+
+            //only work if you are already under an object at the start of the game, and then you cant crouch ever again(auto release crouch attempt failed)
+            //if(isCrouching) 
+            //{
+            //    if(!overheadHit)
+            //    {
+            //        isCrouching = false;
+            //    }
+            //}
+                if (isCrouching)
+                {
+                    playerColl.size = crouchingSize;
+                    playerColl.offset = crouchOffset;
+                }
+                else if (!isCrouching)
+                {
+                    playerColl.size = standingSize;
+                    playerColl.offset = standingOffset;
+                }
+        }
+
+    }
 
     private void FixedUpdate()
     {
@@ -121,45 +163,46 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //CROUCH 
+        ////CROUCH 
 
-        bool overheadHit = Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer);
+        //bool overheadHit = Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer);
 
-        if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
-        {
-            //standingColl.enabled = !isCrouching;
-            //lOGIC: if we are under an object, but we release crouch, it will still remain crouching
-            if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
-            {
-                if (overheadHit)
-                {
-                    isCrouching = true;
+        //if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
+        //{
+        //    //standingColl.enabled = !isCrouching;
+        //    //lOGIC: if we are under an object, but we release crouch, it will still remain crouching
+        //    if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
+        //    {
 
-                }
+        //        if (overheadHit)
+        //        {
+        //            isCrouching = true;
 
-            }
+        //        }
+
+        //    }
 
 
-            //only work if you are already under an object at the start of the game, and then you cant crouch ever again(auto release crouch attempt failed)
-            //if(isCrouching) 
-            //{
-            //    if(!overheadHit)
-            //    {
-            //        isCrouching = false;
-            //    }
-            //}
+        //    //only work if you are already under an object at the start of the game, and then you cant crouch ever again(auto release crouch attempt failed)
+        //    //if(isCrouching) 
+        //    //{
+        //    //    if(!overheadHit)
+        //    //    {
+        //    //        isCrouching = false;
+        //    //    }
+        //    //}
 
-            if (isCrouching)
-            {
-                playerColl.size = crouchingSize;
-                playerColl.offset = crouchOffset;
-            }
-            else if(!isCrouching)
-            {
-                playerColl.size = standingSize;
-                playerColl.offset = standingOffset;
-            }
-        }
+        //    if (isCrouching)
+        //    {
+        //        playerColl.size = crouchingSize;
+        //        playerColl.offset = crouchOffset;
+        //    }
+        //    else if(!isCrouching)
+        //    {
+        //        playerColl.size = standingSize;
+        //        playerColl.offset = standingOffset;
+        //    }
+        //}
 
 
 
@@ -304,26 +347,28 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
+
     //CROUCH
-    //[SerializeField]
-    //private bool _isCrouching = false;
+    [SerializeField]
+    private bool _isCrouched = false;
 
-    //public bool IsCrouching
-    //{
-    //    get
-    //    {
-    //        return _isCrouching;
+    public bool IsCrouched
+    {
+        get
+        {
+            return _isCrouched;
 
-    //    }
-    //    set
-    //    {
-    //        _isCrouching = value;
-    //        animator.SetBool(AnimationStrings.isCrouching, value);
+        }
+        set
+        {
+            _isCrouched = value;
+            animator.SetBool(AnimationStrings.isCrouched, value);
 
-    //    }
+        }
 
 
-    //}
+    }
 
 
     //BUGGED: if you hold w first, then hold a or d, it will run in place again
@@ -362,10 +407,12 @@ public class PlayerController : MonoBehaviour
             if (context.started)
             {
                 isCrouching = true;
+                IsCrouched = true;
             }
             else if (context.canceled)
             {
                 isCrouching = false;
+                IsCrouched = false;
             }
 
     }
@@ -408,6 +455,7 @@ public class PlayerController : MonoBehaviour
     {
         //TODO: Check if alive as well
         isCrouching = false;
+        IsCrouched = false; 
         if (context.started && touchingDiretionsPlayer.IsGrounded && IsAlive==true)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
@@ -423,6 +471,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnDash(InputAction.CallbackContext context)
     {
+        isCrouching = false;
+        IsCrouched = false;
         if (context.started && canDash)
         {
             StartCoroutine(Dash());
