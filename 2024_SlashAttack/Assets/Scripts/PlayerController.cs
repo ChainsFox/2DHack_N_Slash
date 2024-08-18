@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     Damageable damageable;
     TouchingDirectionsPlayer touchingDiretionsPlayer;
     //TouchingDirections touchingDiretions;
+    //DOUBLE JUMP
+    public bool doubleJump;
 
     //new stuff(for flipping character)
     private SpriteRenderer sprite;
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
     public bool canDash = true;
     //CROUCH
     [Header("CROUCH Settings")]
-    public float crouchSpeed = 10f;
+    [SerializeField] private float crouchSpeed = 10f;
     [SerializeField] private bool isCrouching;
     [SerializeField] CapsuleCollider2D playerColl;
     //[SerializeField] Collider2D crouchingColl;
@@ -51,6 +53,8 @@ public class PlayerController : MonoBehaviour
 
     //0.1277385 -0.2145218 (standing offset)
     //0.1277385 -0.7 (crouching offset)
+
+
 
     private void Awake()
     {
@@ -72,6 +76,7 @@ public class PlayerController : MonoBehaviour
 
         if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
         {
+            doubleJump = true; //DOUBLE JUMP BOOL
             //standingColl.enabled = !isCrouching;
             //lOGIC: if we are under an object, but we release crouch, it will still remain crouching
             if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
@@ -207,13 +212,9 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-
-
-
     }
 
-    
+
     //public bool _isFacingRight = true;
 
     //public bool IsFacingRight
@@ -256,10 +257,11 @@ public class PlayerController : MonoBehaviour
                 //if (touchingDiretions.IsGrounded)
                 //{
 
-                //if (touchingDiretionsPlayer.IsGrounded && isCrouching)
-                //{
-                //    return crouchSpeed;//test
-                //}
+                if (IsCrouched)
+                {
+                    return crouchSpeed;//test
+                }
+
                 if (IsRunning)
                 {
                     return runSpeed;
@@ -456,11 +458,17 @@ public class PlayerController : MonoBehaviour
         //TODO: Check if alive as well
         isCrouching = false;
         IsCrouched = false; 
-        if (context.started && touchingDiretionsPlayer.IsGrounded && IsAlive==true)/*&& CanMove */
+        if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
         }
+        if(context.started && doubleJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            doubleJump = false;
+        }
+
 
     }
 
