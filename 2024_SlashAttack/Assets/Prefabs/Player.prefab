@@ -244,6 +244,7 @@ MonoBehaviour:
   walkSpeed: 12
   runSpeed: 18
   jumpImpulse: 20
+  doubleJump: 0
   dashSpeed: 30
   dashDuration: 0.2
   dashCooldown: 0
@@ -265,6 +266,7 @@ MonoBehaviour:
     m_Bits: 64
   _isMoving: 0
   _isRunning: 0
+  _isCrouched: 0
 --- !u!114 &5728064347398645439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,14 +475,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castFilter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 64
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0

@@ -78,8 +78,12 @@ public class TouchingDirectionsPlayer : MonoBehaviour
 
     void FixedUpdate() //anything related to physics we want to put it in the "fixed update"
     {
-        //IsGrounded = touchingCol.Cast(Vector2.down, castFilter, groundHits, groundDistance) > 0; 
-        IsGrounded = Physics2D.BoxCast(touchingCol.bounds.center, touchingCol.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+        //old one:
+        IsGrounded = touchingCol.Cast(Vector2.down, castFilter, groundHits, groundDistance) > 0; 
+        //new one -  will cause infinite wall jumping if use with double jump mechanic
+        //IsGrounded = Physics2D.BoxCast(touchingCol.bounds.center, touchingCol.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+
+
         //IsOnWall = touchingCol.Cast(wallCheckDirection, castFilter, wallHits, wallDistance) > 0;
         //IsOnCeiling = touchingCol.Cast(Vector2.up, castFilter, ceilingHits, ceilingDistance) > 0;
         //explain: Cast function will store the result in the groundHits array, it will also return an int which is the number of collision that this cast detected,
