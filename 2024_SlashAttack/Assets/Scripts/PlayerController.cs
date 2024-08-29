@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
     //0.1277385 -0.2145218 (standing offset)
     //0.1277385 -0.7 (crouching offset)
 
+    //ABILITIES:
+    public Transform firePoint;
+    public GameObject waterballPrefab;
+
 
 
     private void Awake()
@@ -129,13 +133,16 @@ public class PlayerController : MonoBehaviour
 
         //new way to flip the player if i want dont want to affect the "Shooting" script
         if (rb.velocity.x < 0)
-        {
+        {            
             sprite.flipX = true;
         }
         if (rb.velocity.x > 0)
         {
             sprite.flipX = false;
         }
+        //WATERBALL DIRECTIONS
+        
+
 
         //DASH:
         float moveX = moveInput.x;
@@ -146,10 +153,11 @@ public class PlayerController : MonoBehaviour
         {
             if (sprite.flipX == true)
             {
+                //firePoint.transform.Rotate(0, 0f, 0f);
                 moveDirection = new Vector2(-1, 0f);
             }
             else if (sprite.flipX == false)
-            {
+            {   
                 moveDirection = new Vector2(1, 0f);
             }
 
@@ -505,6 +513,15 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
+    public void WaterBall(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
+        }
+
+
+    }
 
 
 

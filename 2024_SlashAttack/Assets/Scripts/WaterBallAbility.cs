@@ -6,15 +6,14 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 [CreateAssetMenu]
 public class WaterBallAbility : Ability
 {
-    [SerializeField] public float speed = 10f;
     //public Rigidbody2D rb;
-    public GameObject BulletPrefab;
+    //public GameObject BulletPrefab;
 
 
     public override void Activate(GameObject parent)
     {
         //ability logic:
-        Instantiate(BulletPrefab);
+        //Instantiate(BulletPrefab);
         
 
 

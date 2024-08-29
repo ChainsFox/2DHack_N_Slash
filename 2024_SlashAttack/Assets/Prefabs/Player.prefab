@@ -52,6 +52,37 @@ MonoBehaviour:
   timeBetweenFiring: 0.3
   holdAttack: 0
   holdShoot: 0
+--- !u!1 &4522267472541336780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887070199009090947}
+  m_Layer: 7
+  m_Name: OverheadCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887070199009090947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4522267472541336780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2841763619833478109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4949806648447505801
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +102,6 @@ GameObject:
   - component: {fileID: 6807496475482399700}
   - component: {fileID: 4231704053787443710}
   - component: {fileID: 1032663327921117006}
-  - component: {fileID: 7664363568005794773}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -93,6 +123,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3281878126133745116}
+  - {fileID: 5018631752940526211}
+  - {fileID: 1887070199009090947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8846843909309052837
@@ -260,11 +292,13 @@ MonoBehaviour:
   crouchingSize: {x: 1.069015, y: 2.172534}
   standingOffset: {x: 0.1277385, y: -0.2145218}
   crouchOffset: {x: 0.1277385, y: -0.7}
-  overheadCheckCollider: {fileID: 0}
+  overheadCheckCollider: {fileID: 1887070199009090947}
   overheadCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  firePoint: {fileID: 5018631752940526211}
+  waterballPrefab: {fileID: 0}
   _isMoving: 0
   _isRunning: 0
   _isCrouched: 0
@@ -457,6 +491,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9ef1b8cd-5cb1-4679-bf82-be565f032750
     m_ActionName: Player/Crouch[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c7d83d7-c85b-45d5-8ee2-84e698d3397d
+    m_ActionName: Player/Second Ability[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -678,18 +716,37 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &7664363568005794773
-MonoBehaviour:
+--- !u!1 &5243039838241665399
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4949806648447505801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82fdddce6a988c4f963ed2eefca6f04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5018631752940526211}
+  m_Layer: 7
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5018631752940526211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243039838241665399}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2841763619833478109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7126091739705995867
 GameObject:
   m_ObjectHideFlags: 0
