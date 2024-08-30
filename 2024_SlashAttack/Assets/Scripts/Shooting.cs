@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 
-public class Shooting : MonoBehaviour
+public class Shooting : MonoBehaviour //attack script
 {
     private Camera mainCam;
     private Vector3 mousePos;

@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using static UnityEngine.Rendering.DebugUI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer), typeof(Damageable))]
@@ -54,9 +55,16 @@ public class PlayerController : MonoBehaviour
     //0.1277385 -0.2145218 (standing offset)
     //0.1277385 -0.7 (crouching offset)
 
+    //(5.8,0.23,0)
     //ABILITIES:
     public Transform firePoint;
     public GameObject waterballPrefab;
+    public bool isFacingRight;
+    Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
+    Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
+    Vector3 xpositionRight = new Vector3(5.8f,0.23f,0f);
+    Vector3 xpositionLeft = new Vector3(-5.8f, 0.23f, 0f);
+
 
 
 
@@ -71,6 +79,7 @@ public class PlayerController : MonoBehaviour
         tr = GetComponent<TrailRenderer>();
         playerColl = GetComponent<CapsuleCollider2D>();
         standingSize = playerColl.size;
+        isFacingRight = true; //can remove if needed
 
     }
     private void Update()
@@ -116,6 +125,23 @@ public class PlayerController : MonoBehaviour
                 }
         }
 
+        //WATERBALL DIRECTIONS(firePoint direction)
+        float xPos = firePoint.transform.position.x;
+        float yPos = firePoint.transform.position.y;
+
+        if (isFacingRight)
+        {
+            firePoint.rotation = yrotationRight;
+            //firePoint.transform.position = new Vector3(5.8f, 0.23f, 0f);
+        }
+
+        else if(!isFacingRight)
+        {
+            firePoint.rotation = yrotationLeft;
+            //firePoint.transform.position = new Vector3(-5.8f, 0.23f, 0f);
+
+        }
+
     }
 
     private void FixedUpdate()
@@ -135,13 +161,13 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.x < 0)
         {            
             sprite.flipX = true;
+            isFacingRight = false;
         }
         if (rb.velocity.x > 0)
         {
             sprite.flipX = false;
-        }
-        //WATERBALL DIRECTIONS
-        
+            isFacingRight = true;
+        }    
 
 
         //DASH:
@@ -153,7 +179,6 @@ public class PlayerController : MonoBehaviour
         {
             if (sprite.flipX == true)
             {
-                //firePoint.transform.Rotate(0, 0f, 0f);
                 moveDirection = new Vector2(-1, 0f);
             }
             else if (sprite.flipX == false)

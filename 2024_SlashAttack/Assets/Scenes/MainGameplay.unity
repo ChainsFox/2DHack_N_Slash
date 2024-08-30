@@ -1347,11 +1347,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5452105571695174788, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.75
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 5452105571695174788, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.92
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: 5452105571695174788, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1385,6 +1385,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
       propertyPath: m_Name
       value: WaterBall
@@ -10156,6 +10160,18 @@ PrefabInstance:
     - target: {fileID: 4949806648447505801, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018631752940526211, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018631752940526211, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018631752940526211, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 5018631752940526211, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_LocalRotation.w
