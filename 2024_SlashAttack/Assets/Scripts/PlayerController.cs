@@ -13,6 +13,7 @@ using static UnityEngine.Rendering.DebugUI;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("BASIC MOVEMENT")]
     [Header("Horizontal Movement")]
     Rigidbody2D rb;
     Animator animator;
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
     //ABILITIES:
     public Transform firePoint;
     public GameObject waterballPrefab;
-    public bool isFacingRight;
+    public bool isFacingRight = true;
     Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
     Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
     Vector3 xpositionRight = new Vector3(5.8f,0.23f,0f);
@@ -126,21 +127,21 @@ public class PlayerController : MonoBehaviour
         }
 
         //WATERBALL DIRECTIONS(firePoint direction)
-        float xPos = firePoint.transform.position.x;
-        float yPos = firePoint.transform.position.y;
+        //float xPos = firePoint.transform.position.x;
+        //float yPos = firePoint.transform.position.y;
 
-        if (isFacingRight)
-        {
-            firePoint.rotation = yrotationRight;
-            //firePoint.transform.position = new Vector3(5.8f, 0.23f, 0f);
-        }
+        //if (isFacingRight)
+        //{
+        //    firePoint.rotation = yrotationRight;
+        //    ////firePoint.transform.position = xpositionRight;
+        //}
 
-        else if(!isFacingRight)
-        {
-            firePoint.rotation = yrotationLeft;
-            //firePoint.transform.position = new Vector3(-5.8f, 0.23f, 0f);
+        //else if(!isFacingRight)
+        //{
+        //    firePoint.rotation = yrotationLeft;
+        //    ////firePoint.transform.position = xpositionLeft;
 
-        }
+        //}
 
     }
 
@@ -158,16 +159,18 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
         //new way to flip the player if i want dont want to affect the "Shooting" script
-        if (rb.velocity.x < 0)
-        {            
-            sprite.flipX = true;
-            isFacingRight = false;
-        }
-        if (rb.velocity.x > 0)
+        if (rb.velocity.x < 0 && isFacingRight)
         {
-            sprite.flipX = false;
-            isFacingRight = true;
-        }    
+            //sprite.flipX = true;
+            //isFacingRight = false;
+            Flip();
+        }
+        if (rb.velocity.x > 0 && !isFacingRight)
+        {
+            //sprite.flipX = false;
+            //isFacingRight = true;
+            Flip();
+        }
 
 
         //DASH:
@@ -177,11 +180,11 @@ public class PlayerController : MonoBehaviour
 
         if (moveDirection == Vector2.zero)//if we standing still it will dash base on which direction our character is facing
         {
-            if (sprite.flipX == true)
+            if (!isFacingRight)
             {
                 moveDirection = new Vector2(-1, 0f);
             }
-            else if (sprite.flipX == false)
+            else if (isFacingRight)
             {   
                 moveDirection = new Vector2(1, 0f);
             }
@@ -454,7 +457,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-
         moveInput = context.ReadValue<Vector2>();
 
         if (IsAlive)
@@ -540,14 +542,35 @@ public class PlayerController : MonoBehaviour
 
     public void WaterBall(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)
         {
-            Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
+            animator.SetTrigger(AnimationStrings.usingAbility);
+            Invoke(nameof(SpawnWaterBall), 0.4f);
+            //Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
         }
 
 
     }
 
+    public void SpawnWaterBall()
+    {
+        Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    //FUNCTIONS
+    private void Flip()
+    {
+        //if (isFacingRight && rb.velocity.x < 0f || !isFacingRight && rb.velocity.x > 0f)
+        //{
+        //    //isFacingRight = !isFacingRight;
+        //    transform.Rotate(0f, 180f, 0f);
+
+        //}
+        isFacingRight = !isFacingRight;
+
+        transform.Rotate(0f, 180f, 0f);
+
+    }
 
 
 }

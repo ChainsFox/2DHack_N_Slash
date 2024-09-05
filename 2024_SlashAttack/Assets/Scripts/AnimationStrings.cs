@@ -25,4 +25,5 @@ internal class AnimationStrings : MonoBehaviour
     internal static string rangedAttackTrigger = "rangedAttack";
     internal static string isLooking = "isLooking";
     internal static string isCrouched = "isCrouched";
+    internal static string usingAbility = "usingAbility";
 }

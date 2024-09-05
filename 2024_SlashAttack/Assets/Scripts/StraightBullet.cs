@@ -7,6 +7,7 @@ public class StraightBullet : MonoBehaviour
 
     [SerializeField] public float speed = 10f;
     public Rigidbody2D rb;
+    PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class StraightBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,5f);
+        Destroy(gameObject,3f);
 
     }
 }

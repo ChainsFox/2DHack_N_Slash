@@ -299,6 +299,7 @@ MonoBehaviour:
     m_Bits: 64
   firePoint: {fileID: 5018631752940526211}
   waterballPrefab: {fileID: 0}
+  isFacingRight: 0
   _isMoving: 0
   _isRunning: 0
   _isCrouched: 0
@@ -741,7 +742,7 @@ Transform:
   m_GameObject: {fileID: 5243039838241665399}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7, y: 0, z: 0}
+  m_LocalPosition: {x: 3.91, y: 0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
