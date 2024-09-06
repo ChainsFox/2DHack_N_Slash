@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -542,12 +541,16 @@ public class PlayerController : MonoBehaviour
 
     public void WaterBall(InputAction.CallbackContext context)
     {
-        if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)
+        if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded && !damageable.LockVelocity)
         {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             animator.SetTrigger(AnimationStrings.usingAbility);
             Invoke(nameof(SpawnWaterBall), 0.4f);
             //Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
         }
+        //rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+
+
 
 
     }
@@ -555,6 +558,7 @@ public class PlayerController : MonoBehaviour
     public void SpawnWaterBall()
     {
         Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
+        rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
 
     //FUNCTIONS
