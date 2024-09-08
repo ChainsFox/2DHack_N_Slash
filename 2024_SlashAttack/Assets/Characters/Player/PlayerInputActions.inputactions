@@ -87,7 +87,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Second Ability",
+                    "name": "1_Ability",
                     "type": "Button",
                     "id": "3c7d83d7-c85b-45d5-8ee2-84e698d3397d",
                     "expectedControlType": "Button",
@@ -379,7 +379,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Second Ability",
+                    "action": "1_Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

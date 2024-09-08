@@ -13,8 +13,9 @@ using static UnityEngine.Rendering.DebugUI;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirectionsPlayer), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("BASIC MOVEMENT")]
     [Header("Horizontal Movement")]
+    //DOUBLE JUMP
+    public bool doubleJump;
     Rigidbody2D rb;
     Animator animator;
     Vector2 moveInput;
@@ -25,8 +26,6 @@ public class PlayerController : MonoBehaviour
     Damageable damageable;
     TouchingDirectionsPlayer touchingDiretionsPlayer;
     //TouchingDirections touchingDiretions;
-    //DOUBLE JUMP
-    public bool doubleJump;
 
     //new stuff(for flipping character)
     private SpriteRenderer sprite;
@@ -61,10 +60,10 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public GameObject waterballPrefab;
     public bool isFacingRight = true;
-    Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
-    Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
-    Vector3 xpositionRight = new Vector3(5.8f,0.23f,0f);
-    Vector3 xpositionLeft = new Vector3(-5.8f, 0.23f, 0f);
+    //Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
+    //Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
+    //Vector3 xpositionRight = new Vector3(5.8f,0.23f,0f);
+    //Vector3 xpositionLeft = new Vector3(-5.8f, 0.23f, 0f);
 
 
 
@@ -79,7 +78,8 @@ public class PlayerController : MonoBehaviour
         tr = GetComponent<TrailRenderer>();
         playerColl = GetComponent<CapsuleCollider2D>();
         standingSize = playerColl.size;
-        isFacingRight = true; //can remove if needed
+        isFacingRight = true;
+
 
     }
     private void Update()
@@ -489,7 +489,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        //TODO: Check if alive as well
         isCrouching = false;
         IsCrouched = false; 
         if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
@@ -539,27 +538,27 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
-    public void WaterBall(InputAction.CallbackContext context)
-    {
-        if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded && !damageable.LockVelocity)
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-            animator.SetTrigger(AnimationStrings.usingAbility);
-            Invoke(nameof(SpawnWaterBall), 0.4f);
-            //Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
-        }
-        //rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+    //public void WaterBall(InputAction.CallbackContext context)
+    //{
+    //    if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)
+    //    {
+    //        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+    //        animator.SetTrigger(AnimationStrings.usingAbility);
+    //        Invoke(nameof(SpawnWaterBall), 0.4f);
+    //        //Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
+    //    }
+    //    //rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
 
 
 
 
-    }
+    //}
 
-    public void SpawnWaterBall()
-    {
-        Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
-        rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-    }
+    //public void SpawnWaterBall()
+    //{
+    //    Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
+    //    rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+    //}
 
     //FUNCTIONS
     private void Flip()

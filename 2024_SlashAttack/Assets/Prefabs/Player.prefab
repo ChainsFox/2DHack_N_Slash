@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 6807496475482399700}
   - component: {fileID: 4231704053787443710}
   - component: {fileID: 1032663327921117006}
+  - component: {fileID: 1912024551307226583}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -274,13 +275,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c86bf3f549ff94d908dd4e5c6f62e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doubleJump: 0
   walkSpeed: 12
   runSpeed: 18
   jumpImpulse: 20
-  doubleJump: 0
   dashSpeed: 30
   dashDuration: 0.2
-  dashCooldown: 0
+  dashCooldown: 0.5
   tr: {fileID: 1032663327921117006}
   moveDirection: {x: 0, y: 0}
   isDashing: 0
@@ -493,7 +494,19 @@ MonoBehaviour:
     m_ActionId: 9ef1b8cd-5cb1-4679-bf82-be565f032750
     m_ActionName: Player/Crouch[/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912024551307226583}
+        m_TargetAssemblyTypeName: Abilities, Assembly-CSharp
+        m_MethodName: WaterBall
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3c7d83d7-c85b-45d5-8ee2-84e698d3397d
     m_ActionName: Player/Second Ability[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
@@ -717,6 +730,21 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1912024551307226583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949806648447505801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c801f55baf68b4699b1cd5aba5b6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 5018631752940526211}
+  waterballPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
+  rb: {fileID: 0}
 --- !u!1 &5243039838241665399
 GameObject:
   m_ObjectHideFlags: 0

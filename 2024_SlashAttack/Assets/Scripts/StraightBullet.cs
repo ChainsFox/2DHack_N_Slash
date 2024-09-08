@@ -12,12 +12,8 @@ public class StraightBullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Destroy(gameObject, 2.5f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Destroy(gameObject,2.5f);
-
-    }
+    
 }
