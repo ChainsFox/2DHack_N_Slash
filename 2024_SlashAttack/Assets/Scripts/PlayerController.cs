@@ -54,16 +54,9 @@ public class PlayerController : MonoBehaviour
 
     //0.1277385 -0.2145218 (standing offset)
     //0.1277385 -0.7 (crouching offset)
-
     //(5.8,0.23,0)
-    //ABILITIES:
-    public Transform firePoint;
-    public GameObject waterballPrefab;
     public bool isFacingRight = true;
-    //Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
-    //Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
-    //Vector3 xpositionRight = new Vector3(5.8f,0.23f,0f);
-    //Vector3 xpositionLeft = new Vector3(-5.8f, 0.23f, 0f);
+    
 
 
 
@@ -538,27 +531,7 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
-    //public void WaterBall(InputAction.CallbackContext context)
-    //{
-    //    if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)
-    //    {
-    //        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-    //        animator.SetTrigger(AnimationStrings.usingAbility);
-    //        Invoke(nameof(SpawnWaterBall), 0.4f);
-    //        //Instantiate(waterballPrefab, firePoint.position, firePoint.rotation); 
-    //    }
-    //    //rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
 
-
-
-
-    //}
-
-    //public void SpawnWaterBall()
-    //{
-    //    Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
-    //    rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-    //}
 
     //FUNCTIONS
     private void Flip()
