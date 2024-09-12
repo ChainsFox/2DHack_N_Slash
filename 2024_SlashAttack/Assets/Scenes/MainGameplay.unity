@@ -10067,6 +10067,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1912024551307226583, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: abilityCD
+      value: 
+      objectReference: {fileID: 11400000, guid: 5770e5cbad5812b46a394110eb43dcfd, type: 2}
+    - target: {fileID: 1912024551307226583, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: abilityText1
       value: 
       objectReference: {fileID: 594572961}

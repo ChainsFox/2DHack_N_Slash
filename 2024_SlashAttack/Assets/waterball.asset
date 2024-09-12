@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff17dc7442c8f8488002f9867f9b463, type: 3}
-  m_Name: WaterBall
+  m_Script: {fileID: 11500000, guid: aedc4ab32823aa142bcb3608e4d8e29d, type: 3}
+  m_Name: waterball
   m_EditorClassIdentifier: 
-  name: WaterBall
-  cooldownTime: 5
-  activeTime: 5
-  speed: 10
-  BulletPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
+  abilityImage: {fileID: 0}
+  abilityText: {fileID: 0}
+  abilityCooldown: 5
+  isAbilityCooldown: 1
+  currentAbilityCooldown: 5

@@ -12,6 +12,8 @@ public class Abilities : MonoBehaviour
     PlayerController playerController;
     Animator animator;
 
+    public AbilityCD abilityCD;
+
     //ABILITIES:
     public Transform firePoint;
     public GameObject waterballPrefab;
@@ -22,7 +24,7 @@ public class Abilities : MonoBehaviour
     //Vector3 xpositionRight = new Vector3(5.8f,0.23f,0f);
     //Vector3 xpositionLeft = new Vector3(-5.8f, 0.23f, 0f);
 
-    [Header("Horizontal Movement")]
+    [Header("ABILITY INFO/COOLDOWNS")]
     public Image abilityImage1;
     public TMP_Text abilityText1;
     //ABILITY 1:
@@ -40,15 +42,19 @@ public class Abilities : MonoBehaviour
 
     private void Start()
     {
-        abilityImage1.fillAmount = 0;
+        //scriptable object test:
+        abilityCD.StartCD(ref abilityImage1,ref abilityText1);
 
-        abilityText1.text = "";
+        //default:
+        //abilityImage1.fillAmount = 0;
+        //abilityText1.text = "";
 
     }
 
     private void Update()
     {
-        AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
+        //AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
+        abilityCD.AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
     }
 
 
@@ -62,6 +68,9 @@ public class Abilities : MonoBehaviour
             //ability 1 cooldown:
             isAbility1Cooldown = true;
             currentAbility1Cooldown = ability1Cooldown;
+
+            abilityCD.isAbilityCooldown = true;
+            abilityCD.currentAbilityCooldown = abilityCD.abilityCooldown;
         }
 
 
@@ -99,11 +108,11 @@ public class Abilities : MonoBehaviour
             {
                 if(skillImage != null)
                 {
-                    skillImage.fillAmount = currentCooldown / maxCooldown;
+                    skillImage.fillAmount = currentCooldown / maxCooldown;//fill in slowly
                 }
                 if (skillText != null)
                 {
-                    skillText.text = Mathf.Ceil(currentCooldown).ToString();
+                    skillText.text = Mathf.Ceil(currentCooldown).ToString();//round up the number to show on text
                 }
 
             }
