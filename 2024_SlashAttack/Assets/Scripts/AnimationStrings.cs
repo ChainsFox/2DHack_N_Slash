@@ -26,4 +26,5 @@ internal class AnimationStrings : MonoBehaviour
     internal static string isLooking = "isLooking";
     internal static string isCrouched = "isCrouched";
     internal static string usingAbility = "usingAbility";
+    internal static string usingAbility2 = "usingAbility2";
 }

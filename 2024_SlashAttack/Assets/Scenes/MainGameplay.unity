@@ -1260,6 +1260,17 @@ TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 1032663327921117006, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
   m_PrefabInstance: {fileID: 2597740567389093233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &987332928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1912024551307226583, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+  m_PrefabInstance: {fileID: 2597740567389093233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987332923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c801f55baf68b4699b1cd5aba5b6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1054883438
 GameObject:
   m_ObjectHideFlags: 0
@@ -10133,6 +10144,10 @@ PrefabInstance:
       propertyPath: ability2Cooldown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1912024551307226583, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: lightningStrikePrefab
+      value: 
+      objectReference: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
     - target: {fileID: 2841763619833478109, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.59
@@ -10187,15 +10202,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_ActionId
       value: 3c7d83d7-c85b-45d5-8ee2-84e698d3397d
       objectReference: {fileID: 0}
     - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionId
+      value: dd3377a7-6da5-4b2a-9aa1-985ef4ed5140
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_ActionName
       value: Player/Second Ability[/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionName
+      value: Player/2_Ability[/Keyboard/q]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 987332928}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LightningStrike
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Abilities, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728064347398645439, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6807496475482399700, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: m_Enabled
@@ -10352,6 +10403,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b858965367345944bf868d024e3b5ee, type: 3}
+--- !u!1001 &6697771730470904246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.11333196
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89462925208257806, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_Name
+      value: LightningStrikeEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
 --- !u!1001 &7023131984899926086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10477,6 +10589,10 @@ PrefabInstance:
       propertyPath: rotatePoint
       value: 
       objectReference: {fileID: 917006433}
+    - target: {fileID: 301816154115875084, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 889886950192449659, guid: 48a7cc7ee5f729e4ea2f5a3895dcddc8, type: 3}
       propertyPath: m_Name
       value: SkeletonEnemy
@@ -10631,3 +10747,4 @@ SceneRoots:
   - {fileID: 1778292963}
   - {fileID: 338730411}
   - {fileID: 1339762840}
+  - {fileID: 6697771730470904246}

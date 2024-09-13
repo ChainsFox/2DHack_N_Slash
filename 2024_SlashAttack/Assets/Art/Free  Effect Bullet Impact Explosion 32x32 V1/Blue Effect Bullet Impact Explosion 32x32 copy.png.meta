@@ -1,0 +1,4813 @@
+fileFormatVersion: 2
+guid: afa4a2ec6c51b5d4c9fda2de15a37500
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a273f0a2ffc4dde4d9c054566d538505
+      internalID: 1554365442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf1fc670ec36eb45a26a9058d954ba7
+      internalID: 868812024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edeea7635653557418afc850a1d2bc25
+      internalID: 919976724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523c2fec1aa365244904020076e32ad1
+      internalID: -866009309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57a8a9b4dab1e6499a74061933c2b14
+      internalID: 1189344745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_5
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af0237f24e25c144b85749a91dd4221
+      internalID: -936774161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0829fb5fa9fa9b4ca4cf590555a9b53
+      internalID: -78893398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8f2755b6b5b3f4081b42cf79268af2
+      internalID: 567807396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35afcadf1d6e58c4dab13a82efe2f153
+      internalID: 1938710233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6165f965a5f1f4bbb69fc739d05ee3
+      internalID: 428712641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_10
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ed315c3ea0969438a8dc4028e4a266
+      internalID: -1739827129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08157f2b3df83c4e837e486de684135
+      internalID: -978854500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d43f61ba39d7747b896fc8e5755f50
+      internalID: -1975314870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_13
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d28ef2e2a7af95409688766f70874de
+      internalID: 322617683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_14
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8128ddc5495564a89511f549635fc3
+      internalID: -254918672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_15
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 475.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17d49ba7f1405d429e600d4ed2a8129
+      internalID: -1217195510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c447d11e02dc60d41aa2556e62476158
+      internalID: 1510948143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2078dbfb109404fb27b1c7a7210507
+      internalID: -2144006873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cf7c3ec2689cf4e8b48e425acb54d7
+      internalID: 498968307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9153a0f617b4188459bbc561ce7294a8
+      internalID: 1263390097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8596cdb4fe6b0dd478a84c1bd58e3179
+      internalID: 581937633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_21
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48b5dc9e0524164c9d89d0cf8fc6b33
+      internalID: 209361999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b33ca3404dd0614cb26e13a1a007b96
+      internalID: 984165831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140174e248e7dbf4498d2b60179ba927
+      internalID: 1600508380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807d573ba5b87ca4bad8d35241f51205
+      internalID: 1684269113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69464a1aebcea34a91ac8da73f92d19
+      internalID: -1973186264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8a7b30a2ba77b4ea0fccc9262506a1
+      internalID: -1016628922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a15232861826648a02bbbc8a7c7653
+      internalID: 1594489924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30a07e3d34ba5343b92b374507d9a1d
+      internalID: 1962770000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_29
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a395c8b45c8a4dd49b1327aa212073da
+      internalID: -710413480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_30
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea199fd86017ebd4fb3e28d9c00e75a4
+      internalID: 325206767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_31
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 439.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77060b41d8a42a54baabb9330c4a2ae1
+      internalID: -309527327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d46bdc55d596449980e099e11ef23c
+      internalID: -1354455342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d1c56ebe785194d81a2600ee02219c
+      internalID: -1566755115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52889031284ace149b9f265a921a789c
+      internalID: 1766932367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88aa187e254b1b47a1ee8076c41addb
+      internalID: 2102175044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7561744c063e14c93ed2b58a62d01b
+      internalID: -613281327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_37
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6523478817e8d848a5ff959684a0275
+      internalID: 808867338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e74a702dd36f943955d7598f44b30c
+      internalID: 803443783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e65c4723a732a4d9e4bf5c891af311
+      internalID: 106294454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_40
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6ad2a389e33646a6f593f423fe3cc
+      internalID: 69354552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f51351353c0d8c4dad63673772ab954
+      internalID: -1532049651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_42
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60ed681a17dc82458f93304a5f35478
+      internalID: -1074976481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f6253c6e6ae744caaa47a11fb4d481
+      internalID: -1371173186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f187fe19b3a842848ebd37bc2747b
+      internalID: -2112076508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_45
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5af8f3a675d724483fef4f00d0443e
+      internalID: -1761848500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_46
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7e7d86960baac4090d82690ee33c9c
+      internalID: 928832482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_47
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 403.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0866879c3a1724893ac4bc5dc43846
+      internalID: 943699858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498ae92ae057a174386010d8e1fb1075
+      internalID: -2035904749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ef65dc465676342ba3fa872e01c26e
+      internalID: -1973161482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b85c979c05e754b9c92801981f8aef
+      internalID: -1402888994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f331f9601078afb4993c928d112ddc76
+      internalID: 1010820582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86283ace4b38eac42b3a7576d954e3d9
+      internalID: 699324923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_53
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c48552860f94e34295399abb799b108
+      internalID: -13472562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_54
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a1609adc4534a41bcb806ae4a72f42
+      internalID: 1943563674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_55
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db07bdeca8b47c4481b2f5720f4c00d
+      internalID: -125677155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_56
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218f138e1ac4bde4f8e0f57fa5458a98
+      internalID: 1768958618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_57
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45948c7216fc7a419be3a29b26e6763
+      internalID: 1664317943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_58
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3560a17bcb5478f4394bd9b0d0b4fd95
+      internalID: 335199969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136f41fc276e1bb43a5e8a32b930736e
+      internalID: 1906439803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_60
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6ba9422d26bfc4da19fc74850874f5
+      internalID: 556874165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_61
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7255603d9239ef8408ad4687c1cb9a5f
+      internalID: 550299326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_62
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb7883af35391546a98d5b5cea6a931
+      internalID: 917592344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_63
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 367.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fcc9a370629464cb3f763d5375063b
+      internalID: -1677430347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46073ab4e93f3324cbfc5c4d7a5d8cab
+      internalID: 368821761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_65
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f046acba0de574dbab74d70e5d336f
+      internalID: -33104902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_66
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f67b8e5ff85f243b4f4e8e9240899d
+      internalID: -672648271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5111a0717bbcfee4db86d39279dcca4d
+      internalID: 1331272992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_68
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b82ee22122d9a498e13f13ed138554
+      internalID: -224227355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_69
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc4cb2411d200741ac4e435d8f06a44
+      internalID: 1224074083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_70
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e5ded12af8a4f4f9a26add466c101e
+      internalID: 1964490321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_71
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabf2633ec503f74ebe07abf7d0af351
+      internalID: 558624988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9255ed1cad8f38409113d87937f5ba7
+      internalID: 351078727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_73
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf74dd2e95cfd714b8f1ee3d1a60f6b2
+      internalID: -1626232973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_74
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ee41a18f2b22a40905b8721c698de9
+      internalID: 110943989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_75
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eeabf020acbba444b044858e1cb78d6
+      internalID: -1050184188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_76
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61167169567b3ee45b6ca3743a99cb3a
+      internalID: -1172863455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_77
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6305343bdd0c0454590baa6811a5869a
+      internalID: -63901189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_78
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 331.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c861261d1f51714c947b58267e831e7
+      internalID: 1819943282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9a0dc68ee8ef14dbccb21109ce8d81
+      internalID: -1264287768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_80
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619f8b7b741c48942962435e5f0eb659
+      internalID: 1939189982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68061366abf702145a8d6bb8e18fc2da
+      internalID: 872627155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_82
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fad46b9fc11d049bb1e4291c8b3f66
+      internalID: -1651913124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_83
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020ee93854fe7b6469be4df9f13810fa
+      internalID: -1271769388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_84
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8b15a2c04909a4eb2096c110d9a43a
+      internalID: 269529153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_85
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2038f12dffb79648b75c5e0afbe4595
+      internalID: 262222801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_86
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84dd490d71a41954dae48ba7592b4358
+      internalID: 362529683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b58db063669b74b92ee56fcca57294
+      internalID: -702146313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_88
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7e2a82a1c1b6d44aef2f699c58d82c
+      internalID: -1793597504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_89
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bf098741a17b54ca7c4427f62c4c99
+      internalID: 1865398717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_90
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811f7d82612002f4689c112fc621cbb1
+      internalID: 831638268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_91
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36fa2f243b26df4fbd31b842c1b69c3
+      internalID: -791006957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_92
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccafec6254efa98459d0e619acc85fef
+      internalID: 1607874522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_93
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 295.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238ca9e3244450746a085afa4774bbec
+      internalID: 16135234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18e47e2b45ac0541a84b4e791858054
+      internalID: -638583176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_95
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a76c8c7bbe9af847915b4fb6de60bd9
+      internalID: -980349157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_96
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d3dfb4796327b428f356cea35f8609
+      internalID: -239262996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06759921f3d63b647b0c1375343f1ba4
+      internalID: 1850290519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_98
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf345092845c9448a8dc3fe5dd4f75e
+      internalID: -465409535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_99
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdc783eac2d24b4494c01e6281b0f92
+      internalID: 911905153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_100
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faeed2122c91b2645a5e4a9c70e84bf5
+      internalID: 1726603887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_101
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97bb1b19b7fa31458fa25a562690d4f
+      internalID: -1375347132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_102
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0ac3ab953e7dd498064341629ec696
+      internalID: 227701814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_103
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8109c85cd85e99e4786fe4e914b716ca
+      internalID: -1407704321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_104
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9bf7dfe2ac52e4195da1dc20f0778b
+      internalID: 1766250318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_105
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cf6b4dc7bc4074ca6acdf27fc56c7b
+      internalID: -13623557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_106
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669acbab2e9eb32448b6d16657de8696
+      internalID: -1981431155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_107
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403072153734164408b5e6d425aa49eb
+      internalID: -1324652275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_108
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b5b1a1485fafa4ca83947ca5bfc795
+      internalID: 1825342668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_109
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 259.42856
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51622f9b4de7b24ba27bf9731f4efbf
+      internalID: -1516170685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef5c1f2d2c7cc44eaf02e39700f5bc9
+      internalID: 614394190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_111
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca8798e9aeaba14ea1d061fe4348afb
+      internalID: 136165530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_112
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b524dcfab116f534983e2bfdc5845fdf
+      internalID: -538298299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_113
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea86cc2e82bfb241b5e6046b79733c3
+      internalID: 1709313736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_114
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1c7a6eb43f1b94d8d27629e9cee630
+      internalID: 293163127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_115
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2850c7540f71a0e48b787adbca87b747
+      internalID: -2121114434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_116
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f58d117d1885514bb322bd9808775c1
+      internalID: 2068933421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_117
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86cfe2a525879e43aac81ea25d16b31
+      internalID: 1660049302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_118
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21c5feac9d9dc248a45319329f2fb02
+      internalID: -808534662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_119
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d8099949adc8e43a5ce1b2ddd3fec4
+      internalID: -1538397918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_120
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d9b6e5b81879f498df33d27337668b
+      internalID: 1099311141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_121
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b897f1b3d2b25d47a338b5668c04722
+      internalID: 1202944316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_122
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b45604b5c89274e9337c6548a4d3a0
+      internalID: 758541502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_123
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd05a74d5ca43084f992e78b594fd9b3
+      internalID: -416519006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_124
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effc575932021804198304aa0667f7d1
+      internalID: -270262352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_125
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 223.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74220dfb2b0ea244fa1c0ed72dd70f05
+      internalID: -728383840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c315193b82321945a00f93d5ef4af72
+      internalID: -1733664069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_127
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4487bbfdb34984282a57876ab647f0
+      internalID: 1778148748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_128
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d8271d44aca5b4a85068a1a343a4d8
+      internalID: -492075498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_129
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05935d1695d9bcc4c8271beade35ba4b
+      internalID: 66744840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_130
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d16aca7ef0caf4b9f93797b215a62b
+      internalID: 607288473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_131
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9261cd41adfcd4c8a52105d45241d7
+      internalID: 44108717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_132
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42f71beacd23f8438a32cbde3d36c57
+      internalID: -1539988764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_133
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7249a2478617ece479e433761e417f5e
+      internalID: 1398344577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_134
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3e678713f82e24d8ae11ae613717e7
+      internalID: 448456437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_135
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca68644687a6c046bf63314833a47fd
+      internalID: -1229911042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_136
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bd90e9db84b0c4489e91f96d30d1c7
+      internalID: -544670484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_137
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642966ebd3c97b34aaf13c9add3967c2
+      internalID: -1995893436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_138
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b9bf5c48ee0d54a89dc46eb8dad9c4
+      internalID: 554537324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_139
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da8e80554bddf64e9d48810fdeabf61
+      internalID: -1074177916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_140
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfc59c4b1965af49a007554f96978dc
+      internalID: -1010514637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_141
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 187.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59153288fe2b0d4eac9a5ce1cea9eb1
+      internalID: 100190249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1516062a6ad7b354aa687d9241783b97
+      internalID: -100217531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_143
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436691e56a52e4f42ad25680992cd49f
+      internalID: -832396607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_144
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c25d0e0f9bdfb842a64e2da9a531ed8
+      internalID: 986856212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_145
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fae0b712171a674ea2d8dac8bc69f17
+      internalID: -1132684197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_146
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04010f89b22bef418c7aac940abdb9e
+      internalID: -1719671586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_147
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6dfe70d4246784f94a665d30c4d278
+      internalID: -2076225510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_148
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4035577868237b24db037861504d56bc
+      internalID: -1313635634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_149
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbd7d26a7e8b554bad3d449489a566a
+      internalID: 1645492274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_150
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2224d6082e5ebc418ef5437aec19ff1
+      internalID: -842750387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_151
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b791caf6711ae94f83be14c5dcc6543
+      internalID: -1032887477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_152
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42419fcf7d25848419b89b6bf52279a6
+      internalID: 1447911393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_153
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c03e32344bb574b894008b25627ad1
+      internalID: 166274714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_154
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8352cae9ef46f4e8801a597d5e9ecb
+      internalID: -1744112616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_155
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487d5d06b89927a43832e113e812fab1
+      internalID: -885297154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_156
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f233e6723ba208443a6702c2c8fae266
+      internalID: -1010705637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_157
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 151.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5b335600fbbd449be4109b6ea7c503
+      internalID: 695194543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_158
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac85d85733555d344a746b3b5692aa23
+      internalID: 891029536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_159
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e20b64242413c54f890fc0a1e6ae82d
+      internalID: -1882164920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_160
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb0c9c56ba4bbc4ca347f9caa174b8d
+      internalID: -1800381012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_161
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c108ce2e2566e784cb08fca8cb6620be
+      internalID: -1778662034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_162
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb01f095cecceb94682ceb12a61a1b37
+      internalID: 1031372356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_163
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ed9dd1847116a43afb2f1b681f237e
+      internalID: 1657124261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_164
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e63f61234a32bf4cbf3d4dc1abe7ead
+      internalID: 2122265758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_165
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7e8b17c770f5a4a932fc4f811c7810
+      internalID: 1912632214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_166
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8aa858c67be5f0428eda2d9af032146
+      internalID: -1078611244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_167
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8873b6b44ed03844faacdac3c80a25e9
+      internalID: 1839200155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_168
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b5ad6ad76c03c4db9ff171aacef141
+      internalID: -1622923205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_169
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc1ad6ceff89ef49ad06807b7c624ec
+      internalID: -1531154072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_170
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecab98a591344c7458c38798f686a4ab
+      internalID: -587912447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_171
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddf6ad2b8ca9cb47803ceaae875d80e
+      internalID: 238857843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_172
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66395a2d1c0e5a049bd4bb028cc3eb1b
+      internalID: -2140618086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_173
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 115.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28ca44ef7efb5146a5463ba2926bac9
+      internalID: 226564140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_174
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3d59c6257c7a74699d4f8b7842ff24
+      internalID: -1707969494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_175
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e35d1d32c7fb045875f0fe4d26c2e5
+      internalID: -1620901252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_176
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d2b6b52dccdab4b90ed49837f64a1f
+      internalID: 1460513883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_177
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a865e93f77c96642894584bc9adae8f
+      internalID: 2139997263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_178
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889f0782ccdf65c41aa08ac74a0d2946
+      internalID: 574069973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_179
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521c020c8d5babc4c8b886a07fdef565
+      internalID: -518544094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_180
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd442f7478bd9a7488a56b514fbb7111
+      internalID: -36066289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_181
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b497352d490ca344a1975bca54864af
+      internalID: -1274437474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_182
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9baa1c523a2174d9aa1ed46bf36334
+      internalID: -468106860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_183
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7d48e5829f00144a626a1990862374
+      internalID: 1277422164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_184
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634b22836a2b14940bd751e1b64085bc
+      internalID: 1669363075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_185
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c241291760e9d574abb0e16deec4db5e
+      internalID: -5359802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_186
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ed45ce8510d5441bb4377a18962014
+      internalID: 2075753957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_187
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8a41ab549e61f47802b95ad949cfcd
+      internalID: -214645380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_188
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 79.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b34a2db620d71b4b99e1293eb962e7b
+      internalID: -2099409586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_189
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cfbf27ec6cde84fb93ab0f7930494e
+      internalID: 2010859946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_190
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ca04fa643a94344b7a15d70bb02001
+      internalID: -504621569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_191
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863a375928c0c464ca455ab563c25c4c
+      internalID: -2019550688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_192
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5889414ba400f134dae45f1558f25473
+      internalID: -1149634625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_193
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ee392a6d500284c8c96d27570eb1b2
+      internalID: 685999122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_194
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6be399db72d3c0478414be2e4369624
+      internalID: 471340002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_195
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbc4ffdfe40b9748a5c1a58f8437d6e
+      internalID: -1157434419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_196
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9d49418e6dabb46aefc708ea513ea7
+      internalID: 132268491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_197
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb407b6cb085a4a4485151db45ebb24e
+      internalID: -313595203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_198
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3948a0733492981459667318223d2cbe
+      internalID: 883712607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_199
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdcfb0d046c089489a787a042fc8351
+      internalID: -2142365822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_200
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 43.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b4fe305242f4d49a8b81ec5a52e5c5
+      internalID: -1852840006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_201
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a9248aabb7ba040ad0fe0856ba48ad
+      internalID: 1521580018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_202
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c83fee25d1cb094b8ce99f9356baddf
+      internalID: -553094655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_203
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d24384004041743bad17fa6945bbdb
+      internalID: 1223413320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_204
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc14f3c2dd5e41429e79057ebacd080
+      internalID: -1057555375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_205
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd1c8b4ad4ea394ba6ea57d290346aa
+      internalID: -1774654892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_206
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3ab3b5945ae614ab8f600dae8d143a
+      internalID: -939831815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_207
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bde6ed2ab325aa4389730f3c5d3633d
+      internalID: 786807575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_208
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0aef40e5eae884fa99fbb118a2a9a7
+      internalID: -1410908129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_209
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8a836893b40e64f834eca0dea1feb6
+      internalID: 1760295290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_210
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f7b103a791da543b353b5f6ef652e8
+      internalID: 953639103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_211
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e4fd711f9fe5b438aa7b27637582c9
+      internalID: -977638458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Effect Bullet Impact Explosion 32x32 copy_212
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 7.42857
+        width: 32
+        height: 36.57143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486a9a5f29363684aaa4d7b155da6ee1
+      internalID: 1338668833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Blue Effect Bullet Impact Explosion 32x32 copy_0: 1554365442
+      Blue Effect Bullet Impact Explosion 32x32 copy_1: 868812024
+      Blue Effect Bullet Impact Explosion 32x32 copy_10: -1739827129
+      Blue Effect Bullet Impact Explosion 32x32 copy_100: 1726603887
+      Blue Effect Bullet Impact Explosion 32x32 copy_101: -1375347132
+      Blue Effect Bullet Impact Explosion 32x32 copy_102: 227701814
+      Blue Effect Bullet Impact Explosion 32x32 copy_103: -1407704321
+      Blue Effect Bullet Impact Explosion 32x32 copy_104: 1766250318
+      Blue Effect Bullet Impact Explosion 32x32 copy_105: -13623557
+      Blue Effect Bullet Impact Explosion 32x32 copy_106: -1981431155
+      Blue Effect Bullet Impact Explosion 32x32 copy_107: -1324652275
+      Blue Effect Bullet Impact Explosion 32x32 copy_108: 1825342668
+      Blue Effect Bullet Impact Explosion 32x32 copy_109: -1516170685
+      Blue Effect Bullet Impact Explosion 32x32 copy_11: -978854500
+      Blue Effect Bullet Impact Explosion 32x32 copy_110: 614394190
+      Blue Effect Bullet Impact Explosion 32x32 copy_111: 136165530
+      Blue Effect Bullet Impact Explosion 32x32 copy_112: -538298299
+      Blue Effect Bullet Impact Explosion 32x32 copy_113: 1709313736
+      Blue Effect Bullet Impact Explosion 32x32 copy_114: 293163127
+      Blue Effect Bullet Impact Explosion 32x32 copy_115: -2121114434
+      Blue Effect Bullet Impact Explosion 32x32 copy_116: 2068933421
+      Blue Effect Bullet Impact Explosion 32x32 copy_117: 1660049302
+      Blue Effect Bullet Impact Explosion 32x32 copy_118: -808534662
+      Blue Effect Bullet Impact Explosion 32x32 copy_119: -1538397918
+      Blue Effect Bullet Impact Explosion 32x32 copy_12: -1975314870
+      Blue Effect Bullet Impact Explosion 32x32 copy_120: 1099311141
+      Blue Effect Bullet Impact Explosion 32x32 copy_121: 1202944316
+      Blue Effect Bullet Impact Explosion 32x32 copy_122: 758541502
+      Blue Effect Bullet Impact Explosion 32x32 copy_123: -416519006
+      Blue Effect Bullet Impact Explosion 32x32 copy_124: -270262352
+      Blue Effect Bullet Impact Explosion 32x32 copy_125: -728383840
+      Blue Effect Bullet Impact Explosion 32x32 copy_126: -1733664069
+      Blue Effect Bullet Impact Explosion 32x32 copy_127: 1778148748
+      Blue Effect Bullet Impact Explosion 32x32 copy_128: -492075498
+      Blue Effect Bullet Impact Explosion 32x32 copy_129: 66744840
+      Blue Effect Bullet Impact Explosion 32x32 copy_13: 322617683
+      Blue Effect Bullet Impact Explosion 32x32 copy_130: 607288473
+      Blue Effect Bullet Impact Explosion 32x32 copy_131: 44108717
+      Blue Effect Bullet Impact Explosion 32x32 copy_132: -1539988764
+      Blue Effect Bullet Impact Explosion 32x32 copy_133: 1398344577
+      Blue Effect Bullet Impact Explosion 32x32 copy_134: 448456437
+      Blue Effect Bullet Impact Explosion 32x32 copy_135: -1229911042
+      Blue Effect Bullet Impact Explosion 32x32 copy_136: -544670484
+      Blue Effect Bullet Impact Explosion 32x32 copy_137: -1995893436
+      Blue Effect Bullet Impact Explosion 32x32 copy_138: 554537324
+      Blue Effect Bullet Impact Explosion 32x32 copy_139: -1074177916
+      Blue Effect Bullet Impact Explosion 32x32 copy_14: -254918672
+      Blue Effect Bullet Impact Explosion 32x32 copy_140: -1010514637
+      Blue Effect Bullet Impact Explosion 32x32 copy_141: 100190249
+      Blue Effect Bullet Impact Explosion 32x32 copy_142: -100217531
+      Blue Effect Bullet Impact Explosion 32x32 copy_143: -832396607
+      Blue Effect Bullet Impact Explosion 32x32 copy_144: 986856212
+      Blue Effect Bullet Impact Explosion 32x32 copy_145: -1132684197
+      Blue Effect Bullet Impact Explosion 32x32 copy_146: -1719671586
+      Blue Effect Bullet Impact Explosion 32x32 copy_147: -2076225510
+      Blue Effect Bullet Impact Explosion 32x32 copy_148: -1313635634
+      Blue Effect Bullet Impact Explosion 32x32 copy_149: 1645492274
+      Blue Effect Bullet Impact Explosion 32x32 copy_15: -1217195510
+      Blue Effect Bullet Impact Explosion 32x32 copy_150: -842750387
+      Blue Effect Bullet Impact Explosion 32x32 copy_151: -1032887477
+      Blue Effect Bullet Impact Explosion 32x32 copy_152: 1447911393
+      Blue Effect Bullet Impact Explosion 32x32 copy_153: 166274714
+      Blue Effect Bullet Impact Explosion 32x32 copy_154: -1744112616
+      Blue Effect Bullet Impact Explosion 32x32 copy_155: -885297154
+      Blue Effect Bullet Impact Explosion 32x32 copy_156: -1010705637
+      Blue Effect Bullet Impact Explosion 32x32 copy_157: 695194543
+      Blue Effect Bullet Impact Explosion 32x32 copy_158: 891029536
+      Blue Effect Bullet Impact Explosion 32x32 copy_159: -1882164920
+      Blue Effect Bullet Impact Explosion 32x32 copy_16: 1510948143
+      Blue Effect Bullet Impact Explosion 32x32 copy_160: -1800381012
+      Blue Effect Bullet Impact Explosion 32x32 copy_161: -1778662034
+      Blue Effect Bullet Impact Explosion 32x32 copy_162: 1031372356
+      Blue Effect Bullet Impact Explosion 32x32 copy_163: 1657124261
+      Blue Effect Bullet Impact Explosion 32x32 copy_164: 2122265758
+      Blue Effect Bullet Impact Explosion 32x32 copy_165: 1912632214
+      Blue Effect Bullet Impact Explosion 32x32 copy_166: -1078611244
+      Blue Effect Bullet Impact Explosion 32x32 copy_167: 1839200155
+      Blue Effect Bullet Impact Explosion 32x32 copy_168: -1622923205
+      Blue Effect Bullet Impact Explosion 32x32 copy_169: -1531154072
+      Blue Effect Bullet Impact Explosion 32x32 copy_17: -2144006873
+      Blue Effect Bullet Impact Explosion 32x32 copy_170: -587912447
+      Blue Effect Bullet Impact Explosion 32x32 copy_171: 238857843
+      Blue Effect Bullet Impact Explosion 32x32 copy_172: -2140618086
+      Blue Effect Bullet Impact Explosion 32x32 copy_173: 226564140
+      Blue Effect Bullet Impact Explosion 32x32 copy_174: -1707969494
+      Blue Effect Bullet Impact Explosion 32x32 copy_175: -1620901252
+      Blue Effect Bullet Impact Explosion 32x32 copy_176: 1460513883
+      Blue Effect Bullet Impact Explosion 32x32 copy_177: 2139997263
+      Blue Effect Bullet Impact Explosion 32x32 copy_178: 574069973
+      Blue Effect Bullet Impact Explosion 32x32 copy_179: -518544094
+      Blue Effect Bullet Impact Explosion 32x32 copy_18: 498968307
+      Blue Effect Bullet Impact Explosion 32x32 copy_180: -36066289
+      Blue Effect Bullet Impact Explosion 32x32 copy_181: -1274437474
+      Blue Effect Bullet Impact Explosion 32x32 copy_182: -468106860
+      Blue Effect Bullet Impact Explosion 32x32 copy_183: 1277422164
+      Blue Effect Bullet Impact Explosion 32x32 copy_184: 1669363075
+      Blue Effect Bullet Impact Explosion 32x32 copy_185: -5359802
+      Blue Effect Bullet Impact Explosion 32x32 copy_186: 2075753957
+      Blue Effect Bullet Impact Explosion 32x32 copy_187: -214645380
+      Blue Effect Bullet Impact Explosion 32x32 copy_188: -2099409586
+      Blue Effect Bullet Impact Explosion 32x32 copy_189: 2010859946
+      Blue Effect Bullet Impact Explosion 32x32 copy_19: 1263390097
+      Blue Effect Bullet Impact Explosion 32x32 copy_190: -504621569
+      Blue Effect Bullet Impact Explosion 32x32 copy_191: -2019550688
+      Blue Effect Bullet Impact Explosion 32x32 copy_192: -1149634625
+      Blue Effect Bullet Impact Explosion 32x32 copy_193: 685999122
+      Blue Effect Bullet Impact Explosion 32x32 copy_194: 471340002
+      Blue Effect Bullet Impact Explosion 32x32 copy_195: -1157434419
+      Blue Effect Bullet Impact Explosion 32x32 copy_196: 132268491
+      Blue Effect Bullet Impact Explosion 32x32 copy_197: -313595203
+      Blue Effect Bullet Impact Explosion 32x32 copy_198: 883712607
+      Blue Effect Bullet Impact Explosion 32x32 copy_199: -2142365822
+      Blue Effect Bullet Impact Explosion 32x32 copy_2: 919976724
+      Blue Effect Bullet Impact Explosion 32x32 copy_20: 581937633
+      Blue Effect Bullet Impact Explosion 32x32 copy_200: -1852840006
+      Blue Effect Bullet Impact Explosion 32x32 copy_201: 1521580018
+      Blue Effect Bullet Impact Explosion 32x32 copy_202: -553094655
+      Blue Effect Bullet Impact Explosion 32x32 copy_203: 1223413320
+      Blue Effect Bullet Impact Explosion 32x32 copy_204: -1057555375
+      Blue Effect Bullet Impact Explosion 32x32 copy_205: -1774654892
+      Blue Effect Bullet Impact Explosion 32x32 copy_206: -939831815
+      Blue Effect Bullet Impact Explosion 32x32 copy_207: 786807575
+      Blue Effect Bullet Impact Explosion 32x32 copy_208: -1410908129
+      Blue Effect Bullet Impact Explosion 32x32 copy_209: 1760295290
+      Blue Effect Bullet Impact Explosion 32x32 copy_21: 209361999
+      Blue Effect Bullet Impact Explosion 32x32 copy_210: 953639103
+      Blue Effect Bullet Impact Explosion 32x32 copy_211: -977638458
+      Blue Effect Bullet Impact Explosion 32x32 copy_212: 1338668833
+      Blue Effect Bullet Impact Explosion 32x32 copy_22: 984165831
+      Blue Effect Bullet Impact Explosion 32x32 copy_23: 1600508380
+      Blue Effect Bullet Impact Explosion 32x32 copy_24: 1684269113
+      Blue Effect Bullet Impact Explosion 32x32 copy_25: -1973186264
+      Blue Effect Bullet Impact Explosion 32x32 copy_26: -1016628922
+      Blue Effect Bullet Impact Explosion 32x32 copy_27: 1594489924
+      Blue Effect Bullet Impact Explosion 32x32 copy_28: 1962770000
+      Blue Effect Bullet Impact Explosion 32x32 copy_29: -710413480
+      Blue Effect Bullet Impact Explosion 32x32 copy_3: -866009309
+      Blue Effect Bullet Impact Explosion 32x32 copy_30: 325206767
+      Blue Effect Bullet Impact Explosion 32x32 copy_31: -309527327
+      Blue Effect Bullet Impact Explosion 32x32 copy_32: -1354455342
+      Blue Effect Bullet Impact Explosion 32x32 copy_33: -1566755115
+      Blue Effect Bullet Impact Explosion 32x32 copy_34: 1766932367
+      Blue Effect Bullet Impact Explosion 32x32 copy_35: 2102175044
+      Blue Effect Bullet Impact Explosion 32x32 copy_36: -613281327
+      Blue Effect Bullet Impact Explosion 32x32 copy_37: 808867338
+      Blue Effect Bullet Impact Explosion 32x32 copy_38: 803443783
+      Blue Effect Bullet Impact Explosion 32x32 copy_39: 106294454
+      Blue Effect Bullet Impact Explosion 32x32 copy_4: 1189344745
+      Blue Effect Bullet Impact Explosion 32x32 copy_40: 69354552
+      Blue Effect Bullet Impact Explosion 32x32 copy_41: -1532049651
+      Blue Effect Bullet Impact Explosion 32x32 copy_42: -1074976481
+      Blue Effect Bullet Impact Explosion 32x32 copy_43: -1371173186
+      Blue Effect Bullet Impact Explosion 32x32 copy_44: -2112076508
+      Blue Effect Bullet Impact Explosion 32x32 copy_45: -1761848500
+      Blue Effect Bullet Impact Explosion 32x32 copy_46: 928832482
+      Blue Effect Bullet Impact Explosion 32x32 copy_47: 943699858
+      Blue Effect Bullet Impact Explosion 32x32 copy_48: -2035904749
+      Blue Effect Bullet Impact Explosion 32x32 copy_49: -1973161482
+      Blue Effect Bullet Impact Explosion 32x32 copy_5: -936774161
+      Blue Effect Bullet Impact Explosion 32x32 copy_50: -1402888994
+      Blue Effect Bullet Impact Explosion 32x32 copy_51: 1010820582
+      Blue Effect Bullet Impact Explosion 32x32 copy_52: 699324923
+      Blue Effect Bullet Impact Explosion 32x32 copy_53: -13472562
+      Blue Effect Bullet Impact Explosion 32x32 copy_54: 1943563674
+      Blue Effect Bullet Impact Explosion 32x32 copy_55: -125677155
+      Blue Effect Bullet Impact Explosion 32x32 copy_56: 1768958618
+      Blue Effect Bullet Impact Explosion 32x32 copy_57: 1664317943
+      Blue Effect Bullet Impact Explosion 32x32 copy_58: 335199969
+      Blue Effect Bullet Impact Explosion 32x32 copy_59: 1906439803
+      Blue Effect Bullet Impact Explosion 32x32 copy_6: -78893398
+      Blue Effect Bullet Impact Explosion 32x32 copy_60: 556874165
+      Blue Effect Bullet Impact Explosion 32x32 copy_61: 550299326
+      Blue Effect Bullet Impact Explosion 32x32 copy_62: 917592344
+      Blue Effect Bullet Impact Explosion 32x32 copy_63: -1677430347
+      Blue Effect Bullet Impact Explosion 32x32 copy_64: 368821761
+      Blue Effect Bullet Impact Explosion 32x32 copy_65: -33104902
+      Blue Effect Bullet Impact Explosion 32x32 copy_66: -672648271
+      Blue Effect Bullet Impact Explosion 32x32 copy_67: 1331272992
+      Blue Effect Bullet Impact Explosion 32x32 copy_68: -224227355
+      Blue Effect Bullet Impact Explosion 32x32 copy_69: 1224074083
+      Blue Effect Bullet Impact Explosion 32x32 copy_7: 567807396
+      Blue Effect Bullet Impact Explosion 32x32 copy_70: 1964490321
+      Blue Effect Bullet Impact Explosion 32x32 copy_71: 558624988
+      Blue Effect Bullet Impact Explosion 32x32 copy_72: 351078727
+      Blue Effect Bullet Impact Explosion 32x32 copy_73: -1626232973
+      Blue Effect Bullet Impact Explosion 32x32 copy_74: 110943989
+      Blue Effect Bullet Impact Explosion 32x32 copy_75: -1050184188
+      Blue Effect Bullet Impact Explosion 32x32 copy_76: -1172863455
+      Blue Effect Bullet Impact Explosion 32x32 copy_77: -63901189
+      Blue Effect Bullet Impact Explosion 32x32 copy_78: 1819943282
+      Blue Effect Bullet Impact Explosion 32x32 copy_79: -1264287768
+      Blue Effect Bullet Impact Explosion 32x32 copy_8: 1938710233
+      Blue Effect Bullet Impact Explosion 32x32 copy_80: 1939189982
+      Blue Effect Bullet Impact Explosion 32x32 copy_81: 872627155
+      Blue Effect Bullet Impact Explosion 32x32 copy_82: -1651913124
+      Blue Effect Bullet Impact Explosion 32x32 copy_83: -1271769388
+      Blue Effect Bullet Impact Explosion 32x32 copy_84: 269529153
+      Blue Effect Bullet Impact Explosion 32x32 copy_85: 262222801
+      Blue Effect Bullet Impact Explosion 32x32 copy_86: 362529683
+      Blue Effect Bullet Impact Explosion 32x32 copy_87: -702146313
+      Blue Effect Bullet Impact Explosion 32x32 copy_88: -1793597504
+      Blue Effect Bullet Impact Explosion 32x32 copy_89: 1865398717
+      Blue Effect Bullet Impact Explosion 32x32 copy_9: 428712641
+      Blue Effect Bullet Impact Explosion 32x32 copy_90: 831638268
+      Blue Effect Bullet Impact Explosion 32x32 copy_91: -791006957
+      Blue Effect Bullet Impact Explosion 32x32 copy_92: 1607874522
+      Blue Effect Bullet Impact Explosion 32x32 copy_93: 16135234
+      Blue Effect Bullet Impact Explosion 32x32 copy_94: -638583176
+      Blue Effect Bullet Impact Explosion 32x32 copy_95: -980349157
+      Blue Effect Bullet Impact Explosion 32x32 copy_96: -239262996
+      Blue Effect Bullet Impact Explosion 32x32 copy_97: 1850290519
+      Blue Effect Bullet Impact Explosion 32x32 copy_98: -465409535
+      Blue Effect Bullet Impact Explosion 32x32 copy_99: 911905153
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

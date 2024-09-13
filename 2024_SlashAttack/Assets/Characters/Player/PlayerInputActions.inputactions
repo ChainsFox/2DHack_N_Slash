@@ -94,6 +94,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "2_Ability",
+                    "type": "Button",
+                    "id": "dd3377a7-6da5-4b2a-9aa1-985ef4ed5140",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -380,6 +389,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "1_Ability",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72e927d3-3afb-4b26-8de6-30369e613d3b",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "2_Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

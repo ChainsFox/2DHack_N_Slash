@@ -16,7 +16,9 @@ public class Abilities : MonoBehaviour
     //ABILITIES:
     public Transform firePoint;
     public GameObject waterballPrefab;
+    public GameObject lightningStrikePrefab;
     private Rigidbody2D rb;
+    public float timer = 0f;
     //(old logic) - now flip with rotate 180
     //Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
     //Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
@@ -34,7 +36,7 @@ public class Abilities : MonoBehaviour
     //ABILITY 2:
     public Image abilityImage2;
     public TMP_Text abilityText2;
-    [SerializeField] private float ability2Cooldown = 0.5f;
+    [SerializeField] private float ability2Cooldown = 1f;
     public bool isAbility2Cooldown = false;
     public float currentAbility2Cooldown;
 
@@ -69,7 +71,7 @@ public class Abilities : MonoBehaviour
     {
         if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility1Cooldown)
         {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            freezePlayer();
             animator.SetTrigger(AnimationStrings.usingAbility);
             Invoke(nameof(SpawnWaterBall), 0.4f);
             //ability 1 cooldown:
@@ -79,14 +81,43 @@ public class Abilities : MonoBehaviour
 
         }
 
-
-
-
     }
 
     public void SpawnWaterBall()
     {
         Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
+        rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    public void LightningStrike(InputAction.CallbackContext context)
+    {
+        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown)
+        {
+            timer += Time.deltaTime;
+            freezePlayer();
+            //rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            animator.SetTrigger(AnimationStrings.usingAbility2);
+            //ability 2 cooldown:
+            isAbility2Cooldown = true;
+            currentAbility2Cooldown = ability2Cooldown;
+            //Instantiate(lightningStrikePrefab, firePoint.position, firePoint.rotation);
+            //Destroy(lightningStrikePrefab, 0.4f);
+
+            Invoke(nameof(unfreezePlayer), 0.4f);
+
+
+
+        }
+
+    }
+
+    public void freezePlayer()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    public void unfreezePlayer()
+    {
         rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
 
