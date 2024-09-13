@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
@@ -11,8 +12,6 @@ public class Abilities : MonoBehaviour
     TouchingDirectionsPlayer touchingDiretionsPlayer;
     PlayerController playerController;
     Animator animator;
-
-    public AbilityCD abilityCD;
 
     //ABILITIES:
     public Transform firePoint;
@@ -25,12 +24,19 @@ public class Abilities : MonoBehaviour
     //Vector3 xpositionLeft = new Vector3(-5.8f, 0.23f, 0f);
 
     [Header("ABILITY INFO/COOLDOWNS")]
+    //ABILITY 1:
     public Image abilityImage1;
     public TMP_Text abilityText1;
-    //ABILITY 1:
     [SerializeField] private float ability1Cooldown = 5f;
     private bool isAbility1Cooldown = false;
     private float currentAbility1Cooldown;
+
+    //ABILITY 2:
+    public Image abilityImage2;
+    public TMP_Text abilityText2;
+    [SerializeField] private float ability2Cooldown = 0.5f;
+    public bool isAbility2Cooldown = false;
+    public float currentAbility2Cooldown;
 
     private void Awake()
     {
@@ -42,22 +48,23 @@ public class Abilities : MonoBehaviour
 
     private void Start()
     {
-        //scriptable object test:
-        abilityCD.StartCD(ref abilityImage1,ref abilityText1);
-
         //default:
-        //abilityImage1.fillAmount = 0;
-        //abilityText1.text = "";
+        abilityImage1.fillAmount = 0;
+        abilityText1.text = "";
+
+        abilityImage2.fillAmount = 0;
+        abilityText2.text = "";
 
     }
 
     private void Update()
     {
-        //AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
-        abilityCD.AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
+        AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
+        AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
+
     }
 
-
+    //ability 1 logic:
     public void WaterBall(InputAction.CallbackContext context)
     {
         if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility1Cooldown)
@@ -67,10 +74,9 @@ public class Abilities : MonoBehaviour
             Invoke(nameof(SpawnWaterBall), 0.4f);
             //ability 1 cooldown:
             isAbility1Cooldown = true;
-            currentAbility1Cooldown = ability1Cooldown;
+            currentAbility1Cooldown = ability1Cooldown; 
 
-            abilityCD.isAbilityCooldown = true;
-            abilityCD.currentAbilityCooldown = abilityCD.abilityCooldown;
+
         }
 
 
@@ -83,6 +89,8 @@ public class Abilities : MonoBehaviour
         Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
         rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
+
+
 
     private void AbilityCooldown(ref float currentCooldown, float maxCooldown, ref bool isCooldown, Image skillImage, TMP_Text skillText)
     {

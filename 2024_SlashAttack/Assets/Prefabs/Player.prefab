@@ -298,8 +298,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  firePoint: {fileID: 5018631752940526211}
-  waterballPrefab: {fileID: 0}
   isFacingRight: 0
   _isMoving: 0
   _isRunning: 0
@@ -744,7 +742,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 5018631752940526211}
   waterballPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
-  rb: {fileID: 0}
+  abilityImage1: {fileID: 0}
+  abilityText1: {fileID: 0}
+  ability1Cooldown: 5
+  abilityImage2: {fileID: 0}
+  abilityText2: {fileID: 0}
+  ability2Cooldown: 5
 --- !u!1 &5243039838241665399
 GameObject:
   m_ObjectHideFlags: 0

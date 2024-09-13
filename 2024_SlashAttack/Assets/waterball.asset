@@ -15,5 +15,5 @@ MonoBehaviour:
   abilityImage: {fileID: 0}
   abilityText: {fileID: 0}
   abilityCooldown: 5
-  isAbilityCooldown: 1
-  currentAbilityCooldown: 5
+  isAbilityCooldown: 0
+  currentAbilityCooldown: 1
