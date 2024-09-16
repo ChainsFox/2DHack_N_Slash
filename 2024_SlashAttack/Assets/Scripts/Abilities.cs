@@ -89,6 +89,13 @@ public class Abilities : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
 
+    public void SpawnLightningStrike()
+    {
+        Instantiate(lightningStrikePrefab, firePoint.position, firePoint.rotation);
+    }
+
+
+
     public void LightningStrike(InputAction.CallbackContext context)
     {
         if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown)
@@ -100,6 +107,7 @@ public class Abilities : MonoBehaviour
             //ability 2 cooldown:
             isAbility2Cooldown = true;
             currentAbility2Cooldown = ability2Cooldown;
+            Invoke(nameof(SpawnLightningStrike),0.3f);
             //Instantiate(lightningStrikePrefab, firePoint.position, firePoint.rotation);
             //Destroy(lightningStrikePrefab, 0.4f);
 
