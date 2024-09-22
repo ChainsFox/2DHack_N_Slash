@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "3_Ability",
+                    "type": "Button",
+                    "id": "609c10da-79e7-46f9-a560-8d0d7ff349da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -400,6 +409,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "2_Ability",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a201b0a-c179-4ce4-afdb-e0f11eed0597",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "3_Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

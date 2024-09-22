@@ -15,10 +15,11 @@ public class Abilities : MonoBehaviour
 
     //ABILITIES:
     public Transform firePoint;
+    public Transform fireStylePoint;
     public GameObject waterballPrefab;
     public GameObject lightningStrikePrefab;
+    public GameObject fireBreathPrefab;
     private Rigidbody2D rb;
-    public float timer = 0f;
     //(old logic) - now flip with rotate 180
     //Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
     //Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
@@ -40,6 +41,13 @@ public class Abilities : MonoBehaviour
     public bool isAbility2Cooldown = false;
     public float currentAbility2Cooldown;
 
+    //ABILITY 3:
+    public Image abilityImage3;
+    public TMP_Text abilityText3;
+    [SerializeField] private float ability3Cooldown = 2f;
+    public bool isAbility3Cooldown = false;
+    public float currentAbility3Cooldown;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -57,13 +65,32 @@ public class Abilities : MonoBehaviour
         abilityImage2.fillAmount = 0;
         abilityText2.text = "";
 
+        abilityImage3.fillAmount = 0;
+        abilityText3.text = "";
+
     }
 
     private void Update()
     {
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
+        AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
 
+    }
+
+    public void SpawnWaterBall()
+    {
+        Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    public void SpawnLightningStrike()
+    {
+        Instantiate(lightningStrikePrefab, firePoint.position, firePoint.rotation);
+    }
+
+    public void spawnFireBreath()
+    {
+        Instantiate(fireBreathPrefab, fireStylePoint.position, fireStylePoint.rotation);
     }
 
     //ability 1 logic:
@@ -74,6 +101,7 @@ public class Abilities : MonoBehaviour
             freezePlayer();
             animator.SetTrigger(AnimationStrings.usingAbility);
             Invoke(nameof(SpawnWaterBall), 0.4f);
+            Invoke(nameof(unfreezePlayer), 0.4f);
             //ability 1 cooldown:
             isAbility1Cooldown = true;
             currentAbility1Cooldown = ability1Cooldown; 
@@ -83,33 +111,18 @@ public class Abilities : MonoBehaviour
 
     }
 
-    public void SpawnWaterBall()
-    {
-        Instantiate(waterballPrefab, firePoint.position, firePoint.rotation);
-        rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-    }
-
-    public void SpawnLightningStrike()
-    {
-        Instantiate(lightningStrikePrefab, firePoint.position, firePoint.rotation);
-    }
-
-
 
     public void LightningStrike(InputAction.CallbackContext context)
     {
         if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown)
         {
-            timer += Time.deltaTime;
             freezePlayer();
-            //rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             animator.SetTrigger(AnimationStrings.usingAbility2);
             //ability 2 cooldown:
             isAbility2Cooldown = true;
             currentAbility2Cooldown = ability2Cooldown;
             Invoke(nameof(SpawnLightningStrike),0.3f);
-            //Instantiate(lightningStrikePrefab, firePoint.position, firePoint.rotation);
-            //Destroy(lightningStrikePrefab, 0.4f);
+
 
             Invoke(nameof(unfreezePlayer), 0.4f);
 
@@ -118,6 +131,28 @@ public class Abilities : MonoBehaviour
         }
 
     }
+
+    public void FireBreath(InputAction.CallbackContext context)
+    {
+        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown)
+        {
+            freezePlayer();
+            animator.SetTrigger(AnimationStrings.usingAbility3);
+            //ability 3 cooldown:
+            isAbility3Cooldown = true;
+            currentAbility3Cooldown = ability3Cooldown;
+            Invoke(nameof(spawnFireBreath), 0.2f);
+
+
+
+            Invoke(nameof(unfreezePlayer), 0.2f);
+
+
+
+        }
+    }
+
+
 
     public void freezePlayer()
     {

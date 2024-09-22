@@ -612,7 +612,19 @@ MonoBehaviour:
     m_ActionId: 3c7d83d7-c85b-45d5-8ee2-84e698d3397d
     m_ActionName: Player/Second Ability[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912024551307226583}
+        m_TargetAssemblyTypeName: Abilities, Assembly-CSharp
+        m_MethodName: LightningStrike
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: dd3377a7-6da5-4b2a-9aa1-985ef4ed5140
     m_ActionName: Player/2_Ability[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
@@ -851,7 +863,7 @@ MonoBehaviour:
   firePoint: {fileID: 5018631752940526211}
   waterballPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
   lightningStrikePrefab: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
-  timer: 0
+  fireBreathPrefab: {fileID: 760433007709548489, guid: 3bf6e3413e643114f8074d8f3ad0a1f0, type: 3}
   abilityImage1: {fileID: 0}
   abilityText1: {fileID: 0}
   ability1Cooldown: 5
