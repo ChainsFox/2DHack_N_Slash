@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -12,6 +13,7 @@ public class Abilities : MonoBehaviour
     TouchingDirectionsPlayer touchingDiretionsPlayer;
     PlayerController playerController;
     Animator animator;
+    StraightBullet straightBullet;
 
     //ABILITIES:
     public Transform firePoint;
@@ -47,6 +49,7 @@ public class Abilities : MonoBehaviour
     [SerializeField] private float ability3Cooldown = 2f;
     public bool isAbility3Cooldown = false;
     public float currentAbility3Cooldown;
+    public bool holdFlame = false;
 
     private void Awake()
     {
@@ -75,6 +78,7 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
+
 
     }
 
@@ -121,7 +125,7 @@ public class Abilities : MonoBehaviour
             //ability 2 cooldown:
             isAbility2Cooldown = true;
             currentAbility2Cooldown = ability2Cooldown;
-            Invoke(nameof(SpawnLightningStrike),0.3f);
+            Invoke(nameof(SpawnLightningStrike), 0.3f);
 
 
             Invoke(nameof(unfreezePlayer), 0.4f);
@@ -130,27 +134,70 @@ public class Abilities : MonoBehaviour
 
         }
 
+
     }
+
+    //public void FireBreath(InputAction.CallbackContext context)
+    //{
+    //    if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility3Cooldown)
+    //    {
+    //        freezePlayer();
+    //        animator.SetTrigger(AnimationStrings.usingAbility3);
+    //        //ability 3 cooldown:
+    //        isAbility3Cooldown = true;
+    //        currentAbility3Cooldown = ability3Cooldown;
+    //        Invoke(nameof(spawnFireBreath), 0.2f);
+
+
+
+    //        Invoke(nameof(unfreezePlayer), 0.2f);
+
+
+
+    //    }
+    //}
 
     public void FireBreath(InputAction.CallbackContext context)
     {
-        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown)
+        if (playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility3Cooldown)
         {
-            freezePlayer();
-            animator.SetTrigger(AnimationStrings.usingAbility3);
-            //ability 3 cooldown:
-            isAbility3Cooldown = true;
-            currentAbility3Cooldown = ability3Cooldown;
-            Invoke(nameof(spawnFireBreath), 0.2f);
+            if (context.started)
+            {
+                holdFlame = true;
+            }
+            if (context.canceled)
+            {
+                holdFlame = false;
+            }
 
+            if(holdFlame)
+            {
+                freezePlayer();
+                playerController.enabled = false;
+                animator.SetBool(AnimationStrings.holdFlame,true);
+                //animator.SetTrigger(AnimationStrings.usingAbility3);
+                //ability 3 cooldown:
+                isAbility3Cooldown = true;
+                currentAbility3Cooldown = ability3Cooldown;
+                spawnFireBreath();
+                //Invoke(nameof(spawnFireBreath), 0.2f);
+            }
 
-
-            Invoke(nameof(unfreezePlayer), 0.2f);
-
+            if(!holdFlame)
+            {
+                //Destroy(straightBullet.gameObject);
+                playerController.enabled = true;
+                animator.SetBool(AnimationStrings.holdFlame,false);
+                unfreezePlayer();
+            }
 
 
         }
     }
+
+
+
+
 
 
 
