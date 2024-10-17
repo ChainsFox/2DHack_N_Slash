@@ -6,16 +6,16 @@ using UnityEngine.U2D;
 
 public class PlayerAttack : MonoBehaviour
 {
-    Collider2D attackCollider;//can be remove part 16
+    //Collider2D attackCollider;//can be remove part 16
     public int attackDamage = 10;
     public Vector2 knockback = Vector2.zero;
     //public Vector2 flipxKnockback = Vector2.zero;
 
-    private void Awake()
-    {
-        attackCollider = GetComponent<Collider2D>();//can be remove part 16
+    //private void Awake()
+    //{
+    //    attackCollider = GetComponent<Collider2D>();//can be remove part 16
 
-    }
+    //}
 
 
 

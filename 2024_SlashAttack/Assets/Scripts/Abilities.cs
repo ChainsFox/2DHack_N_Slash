@@ -13,8 +13,6 @@ public class Abilities : MonoBehaviour
     TouchingDirectionsPlayer touchingDiretionsPlayer;
     PlayerController playerController;
     Animator animator;
-    StraightBullet straightBullet;
-
     //ABILITIES:
     public Transform firePoint;
     public Transform fireStylePoint;
@@ -22,6 +20,9 @@ public class Abilities : MonoBehaviour
     public GameObject lightningStrikePrefab;
     public GameObject fireBreathPrefab;
     private Rigidbody2D rb;
+    public GameObject fireBreathInstance;
+    //public float fireBreathTimer = 0f;
+
     //(old logic) - now flip with rotate 180
     //Quaternion yrotationRight = Quaternion.Euler(0, 0f, 0);
     //Quaternion yrotationLeft = Quaternion.Euler(0, 180, 0);
@@ -78,7 +79,24 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
+        //if(holdFlame)
+        //{
+        //    fireBreathTimer += Time.deltaTime;
 
+        //}
+        //if(fireBreathTimer > 2f)
+        //{
+        //    holdFlame = false;
+        //    animator.SetBool(AnimationStrings.holdFlame, false);
+        //    fireBreathTimer = 0;
+        //}
+        //
+
+        if (isAbility3Cooldown == false)
+        {
+            holdFlame = false;
+            animator.SetBool(AnimationStrings.holdFlame, false);
+        }
 
     }
 
@@ -94,7 +112,7 @@ public class Abilities : MonoBehaviour
 
     public void spawnFireBreath()
     {
-        Instantiate(fireBreathPrefab, fireStylePoint.position, fireStylePoint.rotation);
+        fireBreathInstance = Instantiate(fireBreathPrefab, fireStylePoint.position, fireStylePoint.rotation);
     }
 
     //ability 1 logic:
@@ -159,37 +177,44 @@ public class Abilities : MonoBehaviour
 
     public void FireBreath(InputAction.CallbackContext context)
     {
-        if (playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility3Cooldown)
+        if (playerController.IsAlive && touchingDiretionsPlayer.IsGrounded)
         {
-            if (context.started)
+            if (context.started && !isAbility3Cooldown)
             {
                 holdFlame = true;
+                spawnFireBreath();
             }
             if (context.canceled)
             {
                 holdFlame = false;
+
             }
+
 
             if(holdFlame)
             {
                 freezePlayer();
+                animator.SetBool(AnimationStrings.holdFlame, true);
                 playerController.enabled = false;
-                animator.SetBool(AnimationStrings.holdFlame,true);
                 //animator.SetTrigger(AnimationStrings.usingAbility3);
                 //ability 3 cooldown:
                 isAbility3Cooldown = true;
                 currentAbility3Cooldown = ability3Cooldown;
-                spawnFireBreath();
-                //Invoke(nameof(spawnFireBreath), 0.2f);
-            }
 
-            if(!holdFlame)
-            {
-                //Destroy(straightBullet.gameObject);
-                playerController.enabled = true;
-                animator.SetBool(AnimationStrings.holdFlame,false);
-                unfreezePlayer();
             }
+            if (!holdFlame)
+            {
+                unfreezePlayer();
+                animator.SetBool(AnimationStrings.holdFlame, false);
+                playerController.enabled = true;
+                Destroy(fireBreathInstance);
+
+            }
+           
+
+
+
+
 
 
         }
