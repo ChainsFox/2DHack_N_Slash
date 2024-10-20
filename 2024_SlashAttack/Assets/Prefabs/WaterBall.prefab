@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
+  delayDestroyTime: 2.5
   rb: {fileID: 4694782505796097746}
 --- !u!50 &4694782505796097746
 Rigidbody2D:
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2724301e03668f044b44fc3371f81dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 300
+  attackDamage: 200
   knockback: {x: 0, y: 0}
 --- !u!82 &6066422237818606201
 AudioSource:

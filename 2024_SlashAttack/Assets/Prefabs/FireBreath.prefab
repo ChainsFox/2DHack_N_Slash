@@ -160,7 +160,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760433007709548489}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -239,5 +239,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2724301e03668f044b44fc3371f81dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 200
+  attackDamage: 50
   knockback: {x: 0, y: 0}

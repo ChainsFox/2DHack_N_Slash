@@ -182,6 +182,7 @@ public class Abilities : MonoBehaviour
             if (context.started && !isAbility3Cooldown)
             {
                 holdFlame = true;
+                //animator.SetTrigger(AnimationStrings.usingAbility3);
                 spawnFireBreath();
             }
             if (context.canceled)
@@ -195,8 +196,8 @@ public class Abilities : MonoBehaviour
             {
                 freezePlayer();
                 animator.SetBool(AnimationStrings.holdFlame, true);
-                playerController.enabled = false;
                 //animator.SetTrigger(AnimationStrings.usingAbility3);
+                playerController.enabled = false;
                 //ability 3 cooldown:
                 isAbility3Cooldown = true;
                 currentAbility3Cooldown = ability3Cooldown;
