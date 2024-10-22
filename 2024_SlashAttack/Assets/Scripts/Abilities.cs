@@ -79,24 +79,30 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
-        //if(holdFlame)
+        //if (holdFlame)
         //{
         //    fireBreathTimer += Time.deltaTime;
 
         //}
-        //if(fireBreathTimer > 2f)
+        //if (fireBreathTimer >= 2f)
         //{
         //    holdFlame = false;
         //    animator.SetBool(AnimationStrings.holdFlame, false);
         //    fireBreathTimer = 0;
         //}
-        //
 
-        if (isAbility3Cooldown == false)
+
+
+        if (isAbility3Cooldown == false) //after holding it it will automatically release hold flame and go back to normal state
         {
             holdFlame = false;
             animator.SetBool(AnimationStrings.holdFlame, false);
         }
+        //if (playerController.IsMoving)
+        //{
+        //    Destroy(fireBreathInstance);
+        //}
+
 
     }
 
@@ -182,8 +188,8 @@ public class Abilities : MonoBehaviour
             if (context.started && !isAbility3Cooldown)
             {
                 holdFlame = true;
-                //animator.SetTrigger(AnimationStrings.usingAbility3);
-                spawnFireBreath();
+                Invoke(nameof(spawnFireBreath), 0.35f);
+                //spawnFireBreath();
             }
             if (context.canceled)
             {
@@ -194,9 +200,10 @@ public class Abilities : MonoBehaviour
 
             if(holdFlame)
             {
+                //Invoke(nameof(spawnFireBreath), 0.35f);
                 freezePlayer();
+                animator.SetTrigger(AnimationStrings.usingAbility3);
                 animator.SetBool(AnimationStrings.holdFlame, true);
-                //animator.SetTrigger(AnimationStrings.usingAbility3);
                 playerController.enabled = false;
                 //ability 3 cooldown:
                 isAbility3Cooldown = true;
@@ -209,10 +216,8 @@ public class Abilities : MonoBehaviour
                 animator.SetBool(AnimationStrings.holdFlame, false);
                 playerController.enabled = true;
                 Destroy(fireBreathInstance);
-
+                //fireBreathTimer = 0;
             }
-           
-
 
 
 

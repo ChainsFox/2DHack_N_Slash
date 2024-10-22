@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  delayDestroyTime: 2
+  delayDestroyTime: 1.65
   rb: {fileID: 5601363767484505791}
 --- !u!114 &5335126736181342462
 MonoBehaviour:
@@ -239,5 +239,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2724301e03668f044b44fc3371f81dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 50
+  attackDamage: 60
   knockback: {x: 0, y: 0}
