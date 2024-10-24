@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    Collider2D attackCollider;//can be remove part 16
+    //Collider2D attackCollider;//can be remove part 16
     public int attackDamage = 10;
     public Vector2 knockback = Vector2.zero;
 
     private void Awake()
     {
-        attackCollider = GetComponent<Collider2D>();//can be remove part 16
+        //attackCollider = GetComponent<Collider2D>();//can be remove part 16
 
     }
 
@@ -33,8 +33,8 @@ public class Attack : MonoBehaviour
             //hit the target
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
 
-            if (gotHit)
-                Debug.Log(collision.name + " hit for " + attackDamage);
+            //if (gotHit)
+            //    Debug.Log(collision.name + " hit for " + attackDamage);
         }
 
     }

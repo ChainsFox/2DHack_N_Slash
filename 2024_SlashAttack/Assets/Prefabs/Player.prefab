@@ -627,6 +627,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: dd3377a7-6da5-4b2a-9aa1-985ef4ed5140
     m_ActionName: Player/2_Ability[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 609c10da-79e7-46f9-a560-8d0d7ff349da
+    m_ActionName: Player/3_Ability[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -861,17 +865,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 5018631752940526211}
+  fireStylePoint: {fileID: 0}
   waterballPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
   lightningStrikePrefab: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
   fireBreathPrefab: {fileID: 760433007709548489, guid: 3bf6e3413e643114f8074d8f3ad0a1f0, type: 3}
+  fireBreathInstance: {fileID: 0}
+  fireBreathTimer: 0
   abilityImage1: {fileID: 0}
   abilityText1: {fileID: 0}
-  ability1Cooldown: 5
+  ability1Cooldown: 4
   abilityImage2: {fileID: 0}
   abilityText2: {fileID: 0}
-  ability2Cooldown: 1
+  ability2Cooldown: 3
   isAbility2Cooldown: 0
   currentAbility2Cooldown: 0
+  abilityImage3: {fileID: 0}
+  abilityText3: {fileID: 0}
+  ability3Cooldown: 4
+  isAbility3Cooldown: 0
+  currentAbility3Cooldown: 0
+  holdFlame: 0
 --- !u!1 &5243039838241665399
 GameObject:
   m_ObjectHideFlags: 0
