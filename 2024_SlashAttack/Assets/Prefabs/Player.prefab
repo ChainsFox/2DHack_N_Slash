@@ -202,7 +202,6 @@ GameObject:
   - component: {fileID: 8286899046926355349}
   - component: {fileID: 5728064347398645439}
   - component: {fileID: 1253309232834955905}
-  - component: {fileID: 6807496475482399700}
   - component: {fileID: 4231704053787443710}
   - component: {fileID: 1032663327921117006}
   - component: {fileID: 1912024551307226583}
@@ -667,38 +666,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _isGrounded: 1
---- !u!114 &6807496475482399700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4949806648447505801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506ff1f7489633b4aaf5f8ec5d5f8f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castFilter:
-    useTriggers: 0
-    useLayerMask: 1
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 64
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  groundDistance: 0.05
-  wallDistance: 0.2
-  ceilingDistance: 0.05
-  _isGrounded: 1
-  _isOnWall: 0
-  _isOnCeiling: 0
 --- !u!114 &4231704053787443710
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 18f;
     //public float airWalkSpeed = 18f;
     public float jumpImpulse = 10f;
+    //Script Reference:
     Damageable damageable;
     TouchingDirectionsPlayer touchingDiretionsPlayer;
+    Abilities abilities;
     //TouchingDirections touchingDiretions;
 
     //new stuff(for flipping character)
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        abilities = GetComponent<Abilities>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDiretionsPlayer = GetComponent<TouchingDirectionsPlayer>();
@@ -451,6 +454,7 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
 
+
         if (IsAlive)
         {
             //IsMoving = moveInput != Vector2.zero;
@@ -483,7 +487,8 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         isCrouching = false;
-        IsCrouched = false; 
+        IsCrouched = false;
+        abilities.holdFlame = false;
         if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
@@ -507,6 +512,7 @@ public class PlayerController : MonoBehaviour
     {
         isCrouching = false;
         IsCrouched = false;
+        abilities.holdFlame = false;
         if (context.started && canDash)
         {
             StartCoroutine(Dash());

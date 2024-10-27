@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -81,31 +82,34 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
 
         //Ability 3 logic:
-        if(holdFlame)
+        if (holdFlame)
         {
             fireBreathTimer += Time.deltaTime;
         }
         if (holdFlame && !isAbility3Cooldown)
         {
-
+            playerController.enabled = false;
             //spawnFireBreath();
             Invoke(nameof(spawnFireBreath), 0.35f);
             animator.SetTrigger(AnimationStrings.usingAbility3);
             animator.SetBool(AnimationStrings.holdFlame, true);
-            playerController.enabled = false;
             //ability 3 cooldown:
             isAbility3Cooldown = true;
             currentAbility3Cooldown = ability3Cooldown;
 
         }
-        if (!holdFlame || fireBreathTimer >=3f)
-        {
-            animator.SetBool(AnimationStrings.holdFlame, false);
+        if (!holdFlame || fireBreathTimer >= 3f)
+        {           
             playerController.enabled = true;
+            animator.SetBool(AnimationStrings.holdFlame, false);
             Destroy(fireBreathInstance);
-            fireBreathTimer = 0f;
+            fireBreathTimer = 0f;            
 
         }
+
+        
+
+
 
 
     }
@@ -192,10 +196,14 @@ public class Abilities : MonoBehaviour
             {
                 holdFlame = true;
                 //freezePlayer();
+                //rb.drag = 1000f;
+                //rb.gravityScale = 1000f;
             }
             if (context.canceled)
             {
                 holdFlame = false;
+                //rb.drag = 0.05f;
+                //rb.gravityScale = 4.2f;
                 //unfreezePlayer();
 
             }
@@ -240,7 +248,7 @@ public class Abilities : MonoBehaviour
 
     public void freezePlayer()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
 
     public void unfreezePlayer()

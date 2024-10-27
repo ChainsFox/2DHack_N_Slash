@@ -6,7 +6,7 @@ public class TouchingDirectionsPlayer : MonoBehaviour
 {
     Rigidbody2D rb;
     public ContactFilter2D castFilter;
-    public float groundDistance = 0.05f;
+    public float groundDistance = 0.07f;
     [SerializeField] private LayerMask jumpableGround;
     //public float wallDistance = 0.2f;
     //public float ceilingDistance = 0.05f;
