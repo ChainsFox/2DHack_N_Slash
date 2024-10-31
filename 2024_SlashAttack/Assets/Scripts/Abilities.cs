@@ -88,6 +88,7 @@ public class Abilities : MonoBehaviour
         }
         if (holdFlame && !isAbility3Cooldown)
         {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             playerController.enabled = false;
             //spawnFireBreath();
             Invoke(nameof(spawnFireBreath), 0.35f);
@@ -104,7 +105,7 @@ public class Abilities : MonoBehaviour
             animator.SetBool(AnimationStrings.holdFlame, false);
             Destroy(fireBreathInstance);
             fireBreathTimer = 0f;            
-
+            rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
         }
 
         
@@ -248,12 +249,16 @@ public class Abilities : MonoBehaviour
 
     public void freezePlayer()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        rb.drag = 1000f;
+        rb.gravityScale = 1000f;
+        //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
 
     public void unfreezePlayer()
     {
-        rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+        rb.drag = 0.05f;
+        rb.gravityScale = 4.2f;
+        //rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
 
 
