@@ -852,6 +852,8 @@ MonoBehaviour:
   isAbility3Cooldown: 0
   currentAbility3Cooldown: 0
   holdFlame: 0
+  progressFlameFillSpeed: 0.0518
+  progressFlameSlider: {fileID: 0}
 --- !u!1 &5243039838241665399
 GameObject:
   m_ObjectHideFlags: 0

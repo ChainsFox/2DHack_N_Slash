@@ -52,6 +52,9 @@ public class Abilities : MonoBehaviour
     public bool isAbility3Cooldown = false;
     public float currentAbility3Cooldown;
     public bool holdFlame = false;
+    private float progressFlame = 0f;
+    private float progressFlameFillSpeed = 0.0517f;
+    public Slider progressFlameSlider;
 
     private void Awake()
     {
@@ -80,11 +83,12 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
-
+        progressFlameSlider.value += progressFlame;
         //Ability 3 logic:
         if (holdFlame)
         {
             fireBreathTimer += Time.deltaTime;
+            progressFlame += 0.5f * Time.deltaTime;
         }
         if (holdFlame && !isAbility3Cooldown)
         {
@@ -97,6 +101,8 @@ public class Abilities : MonoBehaviour
             //ability 3 cooldown:
             isAbility3Cooldown = true;
             currentAbility3Cooldown = ability3Cooldown;
+            //Flame Slider bar:
+
 
         }
         if (!holdFlame || fireBreathTimer >= 3f)
@@ -106,6 +112,7 @@ public class Abilities : MonoBehaviour
             Destroy(fireBreathInstance);
             fireBreathTimer = 0f;            
             rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+            progressFlameSlider.value = 0;
         }
 
         
