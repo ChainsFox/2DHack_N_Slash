@@ -6,15 +6,15 @@ public class TouchingDirectionsPlayer : MonoBehaviour
 {
     Rigidbody2D rb;
     public ContactFilter2D castFilter;
-    public float groundDistance = 0.07f;
-    [SerializeField] private LayerMask jumpableGround;
+    public float groundDistance = 0.05f;
+    //[SerializeField] private LayerMask jumpableGround;
     //public float wallDistance = 0.2f;
     //public float ceilingDistance = 0.05f;
 
     CapsuleCollider2D touchingCol;
     RaycastHit2D[] groundHits = new RaycastHit2D[5];
     //RaycastHit2D[] wallHits = new RaycastHit2D[5];
-    RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
+    //RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
 
     Animator animator;
 

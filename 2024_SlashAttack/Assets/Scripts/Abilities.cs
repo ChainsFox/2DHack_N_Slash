@@ -53,7 +53,7 @@ public class Abilities : MonoBehaviour
     public float currentAbility3Cooldown;
     public bool holdFlame = false;
     private float progressFlame = 0f;
-    private float progressFlameFillSpeed = 0.0517f;
+    public float progressFlameFillSpeed = 0.34f;//3 second fire breath
     public Slider progressFlameSlider;
 
     private void Awake()
@@ -83,15 +83,16 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
-        progressFlameSlider.value += progressFlame;
+        progressFlameSlider.value = progressFlame;
         //Ability 3 logic:
         if (holdFlame)
         {
             fireBreathTimer += Time.deltaTime;
-            progressFlame += 0.5f * Time.deltaTime;
+            progressFlame += progressFlameFillSpeed * Time.deltaTime;
         }
         if (holdFlame && !isAbility3Cooldown)
         {
+
             rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             playerController.enabled = false;
             //spawnFireBreath();
@@ -112,8 +113,10 @@ public class Abilities : MonoBehaviour
             Destroy(fireBreathInstance);
             fireBreathTimer = 0f;            
             rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-            progressFlameSlider.value = 0;
+            progressFlame = 0f;
+            holdFlame = false;//bruh
         }
+
 
         
 
@@ -136,6 +139,7 @@ public class Abilities : MonoBehaviour
     {
         fireBreathInstance = Instantiate(fireBreathPrefab, fireStylePoint.position, fireStylePoint.rotation);
     }
+
 
     //ability 1 logic:
     public void WaterBall(InputAction.CallbackContext context)

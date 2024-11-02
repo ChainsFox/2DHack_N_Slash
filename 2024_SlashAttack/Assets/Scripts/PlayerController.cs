@@ -486,15 +486,16 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        isCrouching = false;
-        IsCrouched = false;
+        //isCrouching = false;
+        //IsCrouched = false;
         abilities.holdFlame = false;
         if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+
         }
-        if(context.started && doubleJump)
+        if(context.started && IsAlive && doubleJump)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
             doubleJump = false;

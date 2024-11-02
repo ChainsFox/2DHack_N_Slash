@@ -848,11 +848,11 @@ MonoBehaviour:
   currentAbility2Cooldown: 0
   abilityImage3: {fileID: 0}
   abilityText3: {fileID: 0}
-  ability3Cooldown: 4
+  ability3Cooldown: 5
   isAbility3Cooldown: 0
   currentAbility3Cooldown: 0
   holdFlame: 0
-  progressFlameFillSpeed: 0.0518
+  progressFlameFillSpeed: 0.34
   progressFlameSlider: {fileID: 0}
 --- !u!1 &5243039838241665399
 GameObject:
