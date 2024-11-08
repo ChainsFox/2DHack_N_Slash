@@ -58,6 +58,11 @@ public class PlayerController : MonoBehaviour
     //0.1277385 -0.7 (crouching offset)
     //(5.8,0.23,0)
     public bool isFacingRight = true;
+    //Game feel:
+    public AudioClip dashSFX;
+    public AudioClip doubleJumpSFX;
+    public AudioSource aud;
+    public ParticleSystem dust;
     
 
 
@@ -75,7 +80,8 @@ public class PlayerController : MonoBehaviour
         playerColl = GetComponent<CapsuleCollider2D>();
         standingSize = playerColl.size;
         isFacingRight = true;
-
+        aud = GetComponent<AudioSource>();
+        
 
     }
     private void Update()
@@ -491,6 +497,7 @@ public class PlayerController : MonoBehaviour
         abilities.holdFlame = false;
         if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
+            CreateDust();
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
 
@@ -499,6 +506,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
             doubleJump = false;
+            aud.PlayOneShot(doubleJumpSFX,0.7f);
         }
 
 
@@ -517,6 +525,7 @@ public class PlayerController : MonoBehaviour
         if (context.started && canDash)
         {
             StartCoroutine(Dash());
+            aud.PlayOneShot(dashSFX,0.3f);
         }
         //StartCoroutine(Dash());
 
@@ -553,6 +562,11 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(0f, 180f, 0f);
 
+    }
+
+    public void CreateDust()
+    {
+        dust.Play();
     }
 
 
