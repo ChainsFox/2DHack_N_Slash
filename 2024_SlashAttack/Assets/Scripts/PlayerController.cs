@@ -62,8 +62,11 @@ public class PlayerController : MonoBehaviour
     public AudioClip dashSFX;
     public AudioClip doubleJumpSFX;
     public AudioSource aud;
-    public ParticleSystem dust;
-    
+    public ParticleSystem dust_Jump;
+    public ParticleSystem dust_doubleJump;
+
+
+
 
 
 
@@ -126,6 +129,7 @@ public class PlayerController : MonoBehaviour
                     playerColl.offset = standingOffset;
                 }
         }
+
 
         //WATERBALL DIRECTIONS(firePoint direction)
         //float xPos = firePoint.transform.position.x;
@@ -497,13 +501,14 @@ public class PlayerController : MonoBehaviour
         abilities.holdFlame = false;
         if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
-            CreateDust();
+            dust_Jump.Play();
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
 
         }
-        if(context.started && IsAlive && doubleJump)
+        if(context.started && IsAlive && doubleJump && !touchingDiretionsPlayer.IsGrounded)
         {
+            dust_doubleJump.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
             doubleJump = false;
             aud.PlayOneShot(doubleJumpSFX,0.7f);
@@ -564,10 +569,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void CreateDust()
-    {
-        dust.Play();
-    }
 
 
 }
