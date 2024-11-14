@@ -31,11 +31,11 @@ public class PlayerController : MonoBehaviour
 
     //new stuff(for flipping character)
     private SpriteRenderer sprite;
-    //Dash
+    //DASH
     [Header("DASH Settings")]
-    [SerializeField] private float dashSpeed = 20f;
-    [SerializeField] private float dashDuration = 0.5f;
-    [SerializeField] private float dashCooldown = 1f;
+    [SerializeField] private float dashSpeed = 30f;
+    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] public float dashCooldown = 0.5f;
     [SerializeField] private TrailRenderer tr;
     public Vector2 moveDirection;
     public bool isDashing;
@@ -58,13 +58,21 @@ public class PlayerController : MonoBehaviour
     //0.1277385 -0.7 (crouching offset)
     //(5.8,0.23,0)
     public bool isFacingRight = true;
-    //Game feel:
+    //GAME FEEL:
     public AudioClip dashSFX;
     public AudioClip doubleJumpSFX;
     public AudioSource aud;
     public ParticleSystem dust_Jump;
     public ParticleSystem dust_doubleJump;
 
+    //SLIDE
+    [Header("SLIDE Settings")]
+    [SerializeField] private float slideSpeed = 20f;
+    [SerializeField] private float slideDuration = 0.6f;
+    [SerializeField] public float slideCooldown = 0f;
+    public bool isSliding;
+    public bool canSlide = true;
+    public float initialSlideDirection;
 
 
 
@@ -130,24 +138,6 @@ public class PlayerController : MonoBehaviour
                 }
         }
 
-
-        //WATERBALL DIRECTIONS(firePoint direction)
-        //float xPos = firePoint.transform.position.x;
-        //float yPos = firePoint.transform.position.y;
-
-        //if (isFacingRight)
-        //{
-        //    firePoint.rotation = yrotationRight;
-        //    ////firePoint.transform.position = xpositionRight;
-        //}
-
-        //else if(!isFacingRight)
-        //{
-        //    firePoint.rotation = yrotationLeft;
-        //    ////firePoint.transform.position = xpositionLeft;
-
-        //}
-
     }
 
     private void FixedUpdate()
@@ -156,6 +146,10 @@ public class PlayerController : MonoBehaviour
         if (isDashing)
         {
             return; //if we are dashing then none of the code below is call, after we are done dashing then we can continue to move as normal
+        }
+        if (isSliding)
+        {
+            return; 
         }
 
 
@@ -196,6 +190,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
+
         //up and down dash reduce(if we ever decided that the up and down dash is too much, this is one way of reducing it)
         //if(moveDirection.x == 0f && (moveDirection.y == 1f || moveDirection.y == -1f))
         //{
@@ -205,49 +200,6 @@ public class PlayerController : MonoBehaviour
         //else
         //{
         //    dashSpeed = 30f;
-        //}
-
-
-
-        ////CROUCH 
-
-        //bool overheadHit = Physics2D.OverlapCircle(overheadCheckCollider.position, overheadCheckRadius, groundLayer);
-
-        //if (touchingDiretionsPlayer.IsGrounded) //Changing collider size & offset position 
-        //{
-        //    //standingColl.enabled = !isCrouching;
-        //    //lOGIC: if we are under an object, but we release crouch, it will still remain crouching
-        //    if (!isCrouching)//bugged - cant auto release crouch after crouching through an object
-        //    {
-
-        //        if (overheadHit)
-        //        {
-        //            isCrouching = true;
-
-        //        }
-
-        //    }
-
-
-        //    //only work if you are already under an object at the start of the game, and then you cant crouch ever again(auto release crouch attempt failed)
-        //    //if(isCrouching) 
-        //    //{
-        //    //    if(!overheadHit)
-        //    //    {
-        //    //        isCrouching = false;
-        //    //    }
-        //    //}
-
-        //    if (isCrouching)
-        //    {
-        //        playerColl.size = crouchingSize;
-        //        playerColl.offset = crouchOffset;
-        //    }
-        //    else if(!isCrouching)
-        //    {
-        //        playerColl.size = standingSize;
-        //        playerColl.offset = standingOffset;
-        //    }
         //}
 
 
@@ -529,12 +481,14 @@ public class PlayerController : MonoBehaviour
         abilities.holdFlame = false;
         if (context.started && canDash)
         {
+            abilities.isAbility4Cooldown = true;
+            abilities.currentAbility4Cooldown = dashCooldown;
             StartCoroutine(Dash());
             aud.PlayOneShot(dashSFX,0.3f);
         }
-        //StartCoroutine(Dash());
 
     }
+
 
     private IEnumerator Dash()
     {
@@ -550,6 +504,32 @@ public class PlayerController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+    public void OnSlide(InputAction.CallbackContext context)
+    {
+        if(context.started && touchingDiretionsPlayer.IsGrounded && canSlide)
+        {
+            initialSlideDirection = Mathf.Sign(moveDirection.x);
+            animator.SetBool(AnimationStrings.isSliding, true);
+            StartCoroutine(Slide());
+        }
+
+    }
+
+    private IEnumerator Slide()
+    {
+        canSlide = false;
+        isSliding = true;
+        isCrouching = true;
+        IsCrouched = true;
+        rb.velocity = new Vector2(initialSlideDirection * slideSpeed, moveDirection.y);
+        yield return new WaitForSeconds(slideDuration);
+        isSliding = false;
+        animator.SetBool(AnimationStrings.isSliding, false);
+        yield return new WaitForSeconds(slideCooldown);
+        isCrouching = false;
+        IsCrouched = false;
+        canSlide = true;
     }
 
 

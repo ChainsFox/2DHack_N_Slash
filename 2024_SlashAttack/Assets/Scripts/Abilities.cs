@@ -56,6 +56,13 @@ public class Abilities : MonoBehaviour
     public float progressFlameFillSpeed = 0.34f;//3 second fire breath
     public Slider progressFlameSlider;
 
+    //ABILITY 4:
+    public Image abilityImage4;
+    public TMP_Text abilityText4;
+    //[SerializeField] private float ability4Cooldown = 0.5f;
+    public bool isAbility4Cooldown = false;
+    public float currentAbility4Cooldown;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -76,6 +83,9 @@ public class Abilities : MonoBehaviour
         abilityImage3.fillAmount = 0;
         abilityText3.text = "";
 
+        abilityImage4.fillAmount = 0;
+        abilityText4.text = "";
+
     }
 
     private void Update()
@@ -83,6 +93,7 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility1Cooldown, ability1Cooldown, ref isAbility1Cooldown, abilityImage1, abilityText1);
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
+        AbilityCooldown(ref currentAbility4Cooldown, playerController.dashCooldown, ref isAbility4Cooldown, abilityImage4, abilityText4);
         progressFlameSlider.value = progressFlame;
         //Ability 3 logic:
         if (holdFlame)
@@ -102,7 +113,6 @@ public class Abilities : MonoBehaviour
             //ability 3 cooldown:
             isAbility3Cooldown = true;
             currentAbility3Cooldown = ability3Cooldown;
-            //Flame Slider bar:
 
 
         }
@@ -180,25 +190,6 @@ public class Abilities : MonoBehaviour
 
     }
 
-    //public void FireBreath(InputAction.CallbackContext context)
-    //{
-    //    if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility3Cooldown)
-    //    {
-    //        freezePlayer();
-    //        animator.SetTrigger(AnimationStrings.usingAbility3);
-    //        //ability 3 cooldown:
-    //        isAbility3Cooldown = true;
-    //        currentAbility3Cooldown = ability3Cooldown;
-    //        Invoke(nameof(spawnFireBreath), 0.2f);
-
-
-
-    //        Invoke(nameof(unfreezePlayer), 0.2f);
-
-
-
-    //    }
-    //}
 
     public void FireBreath(InputAction.CallbackContext context)
     {
@@ -207,45 +198,11 @@ public class Abilities : MonoBehaviour
             if (context.started && !isAbility3Cooldown)
             {
                 holdFlame = true;
-                //freezePlayer();
-                //rb.drag = 1000f;
-                //rb.gravityScale = 1000f;
             }
             if (context.canceled)
             {
                 holdFlame = false;
-                //rb.drag = 0.05f;
-                //rb.gravityScale = 4.2f;
-                //unfreezePlayer();
-
             }
-
-            //if (holdFlame)
-            //{
-
-            //    //spawnFireBreath();
-            //    //Invoke(nameof(spawnFireBreath), 0.35f);
-            //    freezePlayer();
-            //    animator.SetTrigger(AnimationStrings.usingAbility3);
-            //    animator.SetBool(AnimationStrings.holdFlame, true);
-            //    playerController.enabled = false;
-            //    //ability 3 cooldown:
-            //    isAbility3Cooldown = true;
-            //    currentAbility3Cooldown = ability3Cooldown;
-
-
-
-            //}
-            //if (!holdFlame)
-            //{
-            //    unfreezePlayer();
-            //    animator.SetBool(AnimationStrings.holdFlame, false);
-            //    playerController.enabled = true;
-            //    Destroy(fireBreathInstance);
-            //    //fireBreathTimer = 0f;
-            //}
-
-
 
 
 

@@ -232,10 +232,10 @@ GameObject:
   - component: {fileID: 2806470368873249133}
   - component: {fileID: 8286899046926355349}
   - component: {fileID: 5728064347398645439}
+  - component: {fileID: 1912024551307226583}
   - component: {fileID: 1253309232834955905}
   - component: {fileID: 4231704053787443710}
   - component: {fileID: 1032663327921117006}
-  - component: {fileID: 1912024551307226583}
   - component: {fileID: 6384919271744921493}
   m_Layer: 7
   m_Name: Player
@@ -442,6 +442,11 @@ MonoBehaviour:
   aud: {fileID: 0}
   dust_Jump: {fileID: 9080962581808791848}
   dust_doubleJump: {fileID: 183193360649314625}
+  slideSpeed: 20
+  slideDuration: 0.6
+  slideCooldown: 0
+  isSliding: 0
+  canSlide: 1
   _isMoving: 0
   _isRunning: 0
   _isCrouched: 0
@@ -667,14 +672,81 @@ MonoBehaviour:
     m_ActionId: dd3377a7-6da5-4b2a-9aa1-985ef4ed5140
     m_ActionName: Player/2_Ability[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912024551307226583}
+        m_TargetAssemblyTypeName: Abilities, Assembly-CSharp
+        m_MethodName: FireBreath
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 609c10da-79e7-46f9-a560-8d0d7ff349da
     m_ActionName: Player/3_Ability[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8286899046926355349}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSlide
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a5ab54e8-fdbc-44d8-b48b-93e27693934e
+    m_ActionName: Player/Slide[/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1912024551307226583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949806648447505801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c801f55baf68b4699b1cd5aba5b6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 5018631752940526211}
+  fireStylePoint: {fileID: 5199526302553945567}
+  waterballPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
+  lightningStrikePrefab: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
+  fireBreathPrefab: {fileID: 760433007709548489, guid: 3bf6e3413e643114f8074d8f3ad0a1f0, type: 3}
+  fireBreathInstance: {fileID: 0}
+  fireBreathTimer: 0
+  abilityImage1: {fileID: 0}
+  abilityText1: {fileID: 0}
+  ability1Cooldown: 4
+  abilityImage2: {fileID: 0}
+  abilityText2: {fileID: 0}
+  ability2Cooldown: 3
+  isAbility2Cooldown: 0
+  currentAbility2Cooldown: 0
+  abilityImage3: {fileID: 0}
+  abilityText3: {fileID: 0}
+  ability3Cooldown: 5
+  isAbility3Cooldown: 0
+  currentAbility3Cooldown: 0
+  holdFlame: 0
+  progressFlameFillSpeed: 0.34
+  progressFlameSlider: {fileID: 0}
+  abilityImage4: {fileID: 0}
+  abilityText4: {fileID: 0}
+  isAbility4Cooldown: 0
+  currentAbility4Cooldown: 0
 --- !u!114 &1253309232834955905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,41 +928,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &1912024551307226583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4949806648447505801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c801f55baf68b4699b1cd5aba5b6a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 5018631752940526211}
-  fireStylePoint: {fileID: 0}
-  waterballPrefab: {fileID: 7608991286212713956, guid: 79f2be9f8b0748e4cbf316ecf8a4c024, type: 3}
-  lightningStrikePrefab: {fileID: 123512503888468320, guid: 874812d1e4073fd47ba710af19598c5e, type: 3}
-  fireBreathPrefab: {fileID: 760433007709548489, guid: 3bf6e3413e643114f8074d8f3ad0a1f0, type: 3}
-  fireBreathInstance: {fileID: 0}
-  fireBreathTimer: 0
-  abilityImage1: {fileID: 0}
-  abilityText1: {fileID: 0}
-  ability1Cooldown: 4
-  abilityImage2: {fileID: 0}
-  abilityText2: {fileID: 0}
-  ability2Cooldown: 3
-  isAbility2Cooldown: 0
-  currentAbility2Cooldown: 0
-  abilityImage3: {fileID: 0}
-  abilityText3: {fileID: 0}
-  ability3Cooldown: 5
-  isAbility3Cooldown: 0
-  currentAbility3Cooldown: 0
-  holdFlame: 0
-  progressFlameFillSpeed: 0.34
-  progressFlameSlider: {fileID: 0}
 --- !u!82 &6384919271744921493
 AudioSource:
   m_ObjectHideFlags: 0
