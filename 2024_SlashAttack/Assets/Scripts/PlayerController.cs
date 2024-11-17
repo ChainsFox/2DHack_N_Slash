@@ -524,11 +524,11 @@ public class PlayerController : MonoBehaviour
         IsCrouched = true;
         rb.velocity = new Vector2(initialSlideDirection * slideSpeed, moveDirection.y);
         yield return new WaitForSeconds(slideDuration);
-        isSliding = false;
         animator.SetBool(AnimationStrings.isSliding, false);
-        yield return new WaitForSeconds(slideCooldown);
+        isSliding = false;
         isCrouching = false;
         IsCrouched = false;
+        yield return new WaitForSeconds(slideCooldown);
         canSlide = true;
     }
 

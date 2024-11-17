@@ -30,4 +30,5 @@ internal class AnimationStrings : MonoBehaviour
     internal static string usingAbility3 = "usingAbility3";
     internal static string holdFlame = "holdFlame";
     internal static string isSliding = "isSliding";
+    internal static string startSlide = "startSlide";
 }
