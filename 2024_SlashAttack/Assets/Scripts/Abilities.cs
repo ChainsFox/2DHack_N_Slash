@@ -59,9 +59,14 @@ public class Abilities : MonoBehaviour
     //ABILITY 4:
     public Image abilityImage4;
     public TMP_Text abilityText4;
-    //[SerializeField] private float ability4Cooldown = 0.5f;
     public bool isAbility4Cooldown = false;
     public float currentAbility4Cooldown;
+
+    //ABILITY 5:
+    public Image abilityImage5;
+    public TMP_Text abilityText5;
+    public bool isAbility5Cooldown = false;
+    public float currentAbility5Cooldown;
 
     private void Awake()
     {
@@ -86,6 +91,9 @@ public class Abilities : MonoBehaviour
         abilityImage4.fillAmount = 0;
         abilityText4.text = "";
 
+        abilityImage5.fillAmount = 0;
+        abilityText5.text = "";
+
     }
 
     private void Update()
@@ -94,6 +102,7 @@ public class Abilities : MonoBehaviour
         AbilityCooldown(ref currentAbility2Cooldown, ability2Cooldown, ref isAbility2Cooldown, abilityImage2, abilityText2);
         AbilityCooldown(ref currentAbility3Cooldown, ability3Cooldown, ref isAbility3Cooldown, abilityImage3, abilityText3);
         AbilityCooldown(ref currentAbility4Cooldown, playerController.dashCooldown, ref isAbility4Cooldown, abilityImage4, abilityText4);
+        AbilityCooldown(ref currentAbility5Cooldown, playerController.slideCooldown, ref isAbility5Cooldown, abilityImage5, abilityText5);
         progressFlameSlider.value = progressFlame;
         //Ability 3 logic:
         if (holdFlame)
@@ -154,7 +163,7 @@ public class Abilities : MonoBehaviour
     //ability 1 logic:
     public void WaterBall(InputAction.CallbackContext context)
     {
-        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility1Cooldown)
+        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility1Cooldown && !playerController.isSliding)
         {
             freezePlayer();
             animator.SetTrigger(AnimationStrings.usingAbility);
@@ -172,7 +181,7 @@ public class Abilities : MonoBehaviour
 
     public void LightningStrike(InputAction.CallbackContext context)
     {
-        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown)
+        if (context.started && playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !isAbility2Cooldown && !playerController.isSliding)
         {
             freezePlayer();
             animator.SetTrigger(AnimationStrings.usingAbility2);
@@ -193,7 +202,7 @@ public class Abilities : MonoBehaviour
 
     public void FireBreath(InputAction.CallbackContext context)
     {
-        if (playerController.IsAlive && touchingDiretionsPlayer.IsGrounded)
+        if (playerController.IsAlive && touchingDiretionsPlayer.IsGrounded && !playerController.isSliding)
         {
             if (context.started && !isAbility3Cooldown)
             {

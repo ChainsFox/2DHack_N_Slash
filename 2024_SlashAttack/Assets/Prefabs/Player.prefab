@@ -444,9 +444,10 @@ MonoBehaviour:
   dust_doubleJump: {fileID: 183193360649314625}
   slideSpeed: 20
   slideDuration: 0.6
-  slideCooldown: 0
+  slideCooldown: 1.5
   isSliding: 0
   canSlide: 1
+  initialSlideDirection: 0
   _isMoving: 0
   _isRunning: 0
   _isCrouched: 0
@@ -747,6 +748,10 @@ MonoBehaviour:
   abilityText4: {fileID: 0}
   isAbility4Cooldown: 0
   currentAbility4Cooldown: 0
+  abilityImage5: {fileID: 0}
+  abilityText5: {fileID: 0}
+  isAbility5Cooldown: 0
+  currentAbility5Cooldown: 0
 --- !u!114 &1253309232834955905
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     [Header("SLIDE Settings")]
     [SerializeField] private float slideSpeed = 20f;
     [SerializeField] private float slideDuration = 0.6f;
-    [SerializeField] public float slideCooldown = 0f;
+    [SerializeField] public float slideCooldown = 2f;
     public bool isSliding;
     public bool canSlide = true;
     public float initialSlideDirection;
@@ -448,9 +448,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        //isCrouching = false;
-        //IsCrouched = false;
         abilities.holdFlame = false;
+        isSliding = false;
+        isCrouching = false;
+        IsCrouched = false;
+        animator.SetBool(AnimationStrings.isSliding, false);
         if (context.started && IsAlive && touchingDiretionsPlayer.IsGrounded)/*&& CanMove */
         {
             dust_Jump.Play();
@@ -507,8 +509,10 @@ public class PlayerController : MonoBehaviour
     }
     public void OnSlide(InputAction.CallbackContext context)
     {
-        if(context.started && touchingDiretionsPlayer.IsGrounded && canSlide)
+        if (context.started && touchingDiretionsPlayer.IsGrounded && canSlide)
         {
+            abilities.isAbility5Cooldown = true;
+            abilities.currentAbility5Cooldown = slideCooldown;
             initialSlideDirection = Mathf.Sign(moveDirection.x);
             animator.SetBool(AnimationStrings.isSliding, true);
             StartCoroutine(Slide());
