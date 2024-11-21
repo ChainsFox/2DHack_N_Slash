@@ -439,12 +439,13 @@ MonoBehaviour:
   isFacingRight: 0
   dashSFX: {fileID: 8300000, guid: 45089bde32603e14b9c82e2db458cd88, type: 3}
   doubleJumpSFX: {fileID: 8300000, guid: 76abe959a6e3f984b89b58a949a0532e, type: 3}
+  slideSFX: {fileID: 8300000, guid: 45089bde32603e14b9c82e2db458cd88, type: 3}
   aud: {fileID: 0}
   dust_Jump: {fileID: 9080962581808791848}
   dust_doubleJump: {fileID: 183193360649314625}
   slideSpeed: 20
   slideDuration: 0.6
-  slideCooldown: 1.5
+  slideCooldown: 1
   isSliding: 0
   canSlide: 1
   initialSlideDirection: 0

@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
     //GAME FEEL:
     public AudioClip dashSFX;
     public AudioClip doubleJumpSFX;
+    public AudioClip slideSFX;
     public AudioSource aud;
     public ParticleSystem dust_Jump;
     public ParticleSystem dust_doubleJump;
@@ -69,7 +70,7 @@ public class PlayerController : MonoBehaviour
     [Header("SLIDE Settings")]
     [SerializeField] private float slideSpeed = 20f;
     [SerializeField] private float slideDuration = 0.6f;
-    [SerializeField] public float slideCooldown = 2f;
+    [SerializeField] public float slideCooldown = 1f;
     public bool isSliding;
     public bool canSlide = true;
     public float initialSlideDirection;
@@ -515,6 +516,7 @@ public class PlayerController : MonoBehaviour
             abilities.currentAbility5Cooldown = slideCooldown;
             initialSlideDirection = Mathf.Sign(moveDirection.x);
             animator.SetBool(AnimationStrings.isSliding, true);
+            aud.PlayOneShot(slideSFX, 0.3f);
             StartCoroutine(Slide());
         }
 

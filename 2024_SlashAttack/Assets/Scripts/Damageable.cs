@@ -11,7 +11,6 @@ public class Damageable : MonoBehaviour
     //new:
     public GameObject childObject;
     public Rigidbody2D rb;
-
     Animator animator;
 
     [SerializeField]
@@ -90,11 +89,26 @@ public class Damageable : MonoBehaviour
                 //test(worked)-19/06/2024-fixed bug where you still move when death
                 //rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezePositionX;
 
-
+                //gameObject.CompareTag("Player")
+            }
+            if (value == false && gameObject.CompareTag("Player"))
+            {
+                rb.bodyType = RigidbodyType2D.Static;
+                DisableParralaxBG();
+                damageableDeath.Invoke();
+                childObject.SetActive(false);
             }
 
         }
 
+    }
+    void DisableParralaxBG()
+    {
+            GameObject[] targetObjects = GameObject.FindGameObjectsWithTag("parralax_bg");
+            foreach (GameObject targetObject in targetObjects)
+            {
+                targetObject.GetComponent<ParralaxEffect>().enabled = false;
+            }
     }
 
     //the velocity should not be changed while this is true but needs to be respected by other physics components like the player controller
