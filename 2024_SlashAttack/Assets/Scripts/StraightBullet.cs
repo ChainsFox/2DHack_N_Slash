@@ -8,12 +8,18 @@ public class StraightBullet : MonoBehaviour
     [SerializeField] public float speed = 10f;
     [SerializeField] public float delayDestroyTime = 2.5f;
     public Rigidbody2D rb;
-    //PlayerController playerController;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb.velocity = transform.right * speed;
         Destroy(gameObject, delayDestroyTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D HitInfo)
+    {
+
+        Destroy(gameObject);
+
     }
 
 

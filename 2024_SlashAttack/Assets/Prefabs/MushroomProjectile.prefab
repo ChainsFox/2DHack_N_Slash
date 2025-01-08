@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5749203860204775782}
   - component: {fileID: 7604296719510914286}
   - component: {fileID: 4063082355418017235}
-  - component: {fileID: 5878549640340396456}
   - component: {fileID: 3246923671749948455}
+  - component: {fileID: 2141537234838775381}
   m_Layer: 10
   m_Name: MushroomProjectile
   m_TagString: Untagged
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 2576518015350407541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d819dbbfd4a19643a65a477be188bf7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -168,20 +168,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5878549640340396456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2576518015350407541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd046754a92e18d499d4385b952568fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 25
-  knockback: {x: 0, y: 0}
 --- !u!58 &3246923671749948455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -217,3 +203,17 @@ CircleCollider2D:
   m_Offset: {x: 0.011282921, y: 0}
   serializedVersion: 2
   m_Radius: 0.6727629
+--- !u!114 &2141537234838775381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576518015350407541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2724301e03668f044b44fc3371f81dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
+  knockback: {x: 0, y: 0}
