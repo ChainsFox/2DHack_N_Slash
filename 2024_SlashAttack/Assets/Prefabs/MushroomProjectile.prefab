@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  delayDestroyTime: 2.5
+  delayDestroyTime: 1
   rb: {fileID: 4063082355418017235}
 --- !u!50 &4063082355418017235
 Rigidbody2D:

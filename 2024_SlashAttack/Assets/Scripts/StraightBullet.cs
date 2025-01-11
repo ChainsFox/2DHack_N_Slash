@@ -15,12 +15,6 @@ public class StraightBullet : MonoBehaviour
         Destroy(gameObject, delayDestroyTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D HitInfo)
-    {
-
-        Destroy(gameObject);
-
-    }
 
 
 

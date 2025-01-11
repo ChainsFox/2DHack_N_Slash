@@ -8837,6 +8837,17 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 8785789244298356931, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
   m_PrefabInstance: {fileID: 2597740567389093233}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &987332937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4231704053787443710, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+  m_PrefabInstance: {fileID: 2597740567389093233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987332923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b488a47d3e2b174cacad9136d8badd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1009178210
 GameObject:
   m_ObjectHideFlags: 0
@@ -9407,7 +9418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd046754a92e18d499d4385b952568fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  attackDamage: 80
   knockback: {x: 0, y: 0}
 --- !u!114 &1186948099
 MonoBehaviour:
@@ -9422,9 +9433,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2576518015350407541, guid: f7b244e05f75e214c96c6ef8da0875d9, type: 3}
+  damageable: {fileID: 987332937}
   firePoint: {fileID: 594052486}
   hitboxDetection: {fileID: 1009178213}
   playerCollider: {fileID: 987332935}
+  delay: 0.8
   Knight: {fileID: 1159433015}
   rb: {fileID: 1159433014}
 --- !u!114 &1260204987 stripped
@@ -23307,6 +23320,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1945444527}
     - target: {fileID: 4231704053787443710, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
+      propertyPath: _health
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231704053787443710, guid: 4cca8bc419a726046ad06eb89da6527d, type: 3}
       propertyPath: Parralax_BG
       value: 
       objectReference: {fileID: 1945444527}
@@ -23854,12 +23871,12 @@ SceneRoots:
   - {fileID: 284155622}
   - {fileID: 326478080}
   - {fileID: 1552164812}
-  - {fileID: 8611686148954635899}
   - {fileID: 1778292963}
   - {fileID: 338730411}
   - {fileID: 1339762840}
   - {fileID: 5001254640660635868}
   - {fileID: 807855480}
   - {fileID: 132027566}
+  - {fileID: 8611686148954635899}
   - {fileID: 8063838313452981443}
   - {fileID: 1159433012}
