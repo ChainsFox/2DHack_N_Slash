@@ -12,16 +12,17 @@ public class MushroomFlip : MonoBehaviour
     {
         if (rb.velocity.x < 0 && Knight.isFacingRight)
         {
-            FlipSide();
+            FlipFire();
         }
         if (rb.velocity.x > 0 && !Knight.isFacingRight)
         {
-            FlipSide();
+            FlipFire();
         }
 
     }
 
-    public void FlipSide()
+
+    public void FlipFire()
     {
         Knight.isFacingRight = !Knight.isFacingRight;
         firePoint.transform.Rotate(0f, 180f, 0f);

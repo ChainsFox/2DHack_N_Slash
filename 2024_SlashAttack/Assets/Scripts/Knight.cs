@@ -17,7 +17,7 @@ public class Knight : MonoBehaviour
     TouchingDirections touchingDirections;
     Damageable damageable;
     public enum WalkableDirection { Right, Left };
-    public bool isFacingRight;
+    public bool isFacingRight = true;
 
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
@@ -35,7 +35,7 @@ public class Knight : MonoBehaviour
                 if (value == WalkableDirection.Right)
                 {
                     walkDirectionVector = Vector2.right;
-                    
+
                 }
                 else if (value == WalkableDirection.Left)
                 {

@@ -9,10 +9,8 @@ public class MushroomShoot : MonoBehaviour
     public MushroomFlip mushroomFlip;
     public Collider2D hitboxDetection;
     public Collider2D playerCollider;
-    //private float timer;
-    //[SerializeField] private float delay = 0.8f;
-    [SerializeField] private float fireRate = 0.8f; //1 projectile per second
-    [SerializeField] private float nextFireTime = 0f;
+    [SerializeField] private float fireRate = 0.6f; //1 projectile per second
+    private float nextFireTime;
     public void SpawnProjectile()
     {
         Instantiate(projectilePrefab, mushroomFlip.firePoint.position, mushroomFlip.firePoint.rotation);
@@ -22,15 +20,6 @@ public class MushroomShoot : MonoBehaviour
     {
         if (hitboxDetection.IsTouching(playerCollider) && playerDamageable.IsAlive)
         {
-            //timer += Time.deltaTime;
-
-            //SpawnProjectile();
-            //if (timer > delay)
-            //{
-            //    timer = 0f;
-            //    InvokeRepeating(nameof(SpawnProjectile), 0f, 0f);
-            //}
-
             if (Time.time > nextFireTime)
             {
                 nextFireTime = Time.time + fireRate;
