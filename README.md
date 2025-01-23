@@ -359,3 +359,5 @@ Range enemy :
 14/01/2025
 +)Minium requirement for ending the project is done(option)
 ->The range enemy is complete
+
+=>Overview: This project is me learning and trying to implement more complex idea and mechanics into my 2d game. Can i implement the things that i think of, into the game, and with all this time and effort, i think i absolutely can. But, there is a big downside, this project is not optimize at all, so that is one of the many things i need to improve on.
